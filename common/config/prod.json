@@ -1,6 +1,6 @@
 {
   "port": "8000",
-  "name": "express-boilerplate-mvc",
+  "name": "Cherry-Chat",
   "endpoints": "../endpoints/",
   "front": {
     "viewPath": "public/front/views/"
@@ -11,6 +11,6 @@
   "db": {
     "host": "mongodb://localhost",
     "port": "27017",
-    "name": "express-boilerplate-mvc"
+    "name": "Cherry-Chat"
   }
 }
