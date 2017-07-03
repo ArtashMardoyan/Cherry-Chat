@@ -1,0 +1,64 @@
+{
+  "name": "Express-Boilerplate-MVC",
+  "version": "0.0.1",
+  "description": "Boilerplate for fast bootstrap of express based applications using ES6 and MVC pattern",
+  "keywords": [
+    "Express-Boilerplate-MVC",
+    "expressJS",
+    "boilerplate",
+    "MVC",
+    "github"
+  ],
+  "main": "index.js",
+  "scripts": {},
+  "author": {
+    "name": "Robert Hanesoghlyan",
+    "email": "rhanesoghlyan@gmail.com",
+    "developers": [
+      {
+        "name": "Gagik Alixanyan",
+        "email": "alixanyangagik@gmail.com"
+      },
+      {
+        "name": "Artash Mardoyan",
+        "email": "artashmardoyan@gmail.com"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhanesoghlyan/Express-Boilerplate-MVC.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "i18n-express": "^1.1.2",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.29",
+    "mongoose": "^4.10.7",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower-concat": "^1.0.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express-server": "^0.5.3",
+    "grunt-rev": "^0.1.0",
+    "grunt-update": "^0.2.3",
+    "grunt-usemin": "^3.1.1",
+    "load-grunt-configs": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}

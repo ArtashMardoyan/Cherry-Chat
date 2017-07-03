@@ -1,0 +1,15 @@
+.idea/
+
+node_modules/
+
+bower_components/
+
+dist/
+
+.tmp/
+
+.sass-cache/
+
+package-lock.json
+
+config/dev.json
