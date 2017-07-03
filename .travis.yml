@@ -1,0 +1,12 @@
+language: node_js
+services: mongodb
+before_install:
+  - 'sudo apt-get install ruby-full'
+  - 'gem install sass'
+node_js:
+  - '7'
+before_script:
+  - 'npm install -g bower grunt-cli'
+  - 'bower install'
+  - 'npm install'
+  - 'grunt build'
