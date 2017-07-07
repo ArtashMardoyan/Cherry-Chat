@@ -1,0 +1,172 @@
+@font-face {
+  font-family: 'Open-Sans';
+  src: url("../../fonts/OpenSans.eot");
+  src: url("../../fonts/OpenSans.eot?#iefix") format("embedded-opentype"), url("../../fonts/OpenSans.svg#OpenSans") format("svg"), url("../../fonts/OpenSans.ttf") format("truetype"), url("../../fonts/OpenSans.woff2") format("woff2"), url("../../fonts/OpenSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  width: 98%;
+  height: 98%;
+}
+
+body {
+  font-family: 'Open-Sans';
+  position: relative;
+}
+
+h1 {
+  font-size: 50px;
+  color: #731121;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.main {
+  position: relative;
+}
+
+.login .sign-btn a {
+  text-decoration: none;
+  color: #048a19;
+  font-weight: bold;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+}
+.login .sign-btn a:hover {
+  color: #d0caca;
+}
+.login .sign-btn a:focus {
+  color: #d0caca;
+}
+
+.border-dark {
+  border: 1px solid #731121;
+}
+.border-dark::-moz-placeholder {
+  color: #5f5b5b;
+  opacity: 1;
+}
+.border-dark:-ms-input-placeholder {
+  color: #5f5b5b;
+}
+.border-dark::-webkit-input-placeholder {
+  color: #5f5b5b;
+}
+
+.form-control, .form-control:focus {
+  border-color: #731121;
+  outline: 0 none;
+  font-size: 16px;
+}
+
+.min-height {
+  min-height: 380px;
+  margin-top: 20px;
+}
+
+.front p {
+  font-size: 16px;
+}
+
+.login-screen {
+  background: url(../../img/background/cherry.jpg) center no-repeat fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.login-screen:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.login-center {
+  text-align: left;
+}
+
+.login {
+  width: 320px;
+  color: #048a19;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+  margin: 100px 0 0 70px;
+  font-size: 16px;
+}
+.login .login-form {
+  text-align: left;
+}
+.login label {
+  color: #048a19;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+}
+.login label:hover, .login label:focus {
+  color: #d0caca;
+}
+
+.login-form .input-group .form-control {
+  height: 44px;
+  color: #d0caca;
+  box-shadow: none;
+}
+.login-form .input-group .input-group-addon, .login-form .input-group .form-control {
+  background: none;
+}
+
+.login-form .input-group .input-group-addon .glyphicon, .login-form .input-group .form-control .glyphicon {
+  color: #d0caca;
+}
+
+.login .sign-btn input.btn {
+  border: 2px solid #50131d;
+  background: #731121;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  color: #d0caca;
+}
+.login .sign-btn input.btn:hover {
+  background: #50131d;
+}
+.login .sign-btn input.btn:focus {
+  background: #50131d;
+}
+
+.login .checkbox {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.login .checkbox input {
+  margin-top: 6px;
+}
+
+.login {
+  padding: 20px 0;
+}
+.login .forgot {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.sign-up {
+  margin-top: 20px;
+  color: #048a19;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.input-relative {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.error-message {
+  position: absolute;
+  top: 105%;
+  right: 0;
+  font-size: 12px !important;
+}

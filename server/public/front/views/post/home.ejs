@@ -1,10 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title><%= title %></title>
-</head>
-<body>
-<h1><%= title %></h1>
-</body>
-</html>
+<% include ./layout/partials/header.ejs %>
+
+<div class="login-screen"></div>
+<div class="login-center">
+    <div class="containter min-height">
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-4">
+                <div class="login text-center" id="card">
+                    <h1>Cherry Chat</h1>
+                    <div class="front signin_form">
+                        <p>Login Your Account</p>
+                        <form class="login-form">
+                            <div class="form-group">
+                                <div class="input-group input-relative">
+                                    <input type="text" class="form-control border-dark" placeholder="Type your login">
+                                    <span class="input-group-addon border-dark">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                    </span>
+                                    <p class="text-danger error-message"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-relative">
+                                    <input type="password" class="form-control border-dark"
+                                           placeholder="Type your password">
+                                    <span class="input-group-addon border-dark">
+                                        <i class="glyphicon glyphicon-lock"></i>
+                                    </span>
+                                    <p class="text-danger error-message"></p>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox">Remember me</label>
+                            </div>
+                            <div class="form-group sign-btn">
+                                <input type="submit" class="btn" value="Log in">
+                                <p class="sign-up">
+                                    <a href="#" class="forgot pull-left">New to TimeInfo?</a>
+                                    <a href="#" id="flip-btn" class="signup signup_link pull-right">
+                                        Sign up
+                                    </a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ./layout/partials/footer.ejs %>

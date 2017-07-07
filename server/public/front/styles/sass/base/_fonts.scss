@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Open-Sans';
+  src: url('../../fonts/OpenSans.eot');
+  src: url('../../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/OpenSans.svg#OpenSans') format('svg'),
+  url('../../fonts/OpenSans.ttf') format('truetype'),
+  url('../../fonts/OpenSans.woff2') format('woff2'),
+  url('../../fonts/OpenSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-cursive: cursive;
+$heading-size: 50px;
+$text-size: 16px;
+$error: 12px;

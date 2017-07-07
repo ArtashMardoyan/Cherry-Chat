@@ -1,0 +1,167 @@
+html, body {
+  @include size(98%, 98%);
+}
+
+body {
+  font-family: 'Open-Sans';
+  position: relative;
+}
+
+h1 {
+  font-size: $heading-size;
+  color: $cherry;
+  text-shadow: 1px 1px $blackLight;
+}
+
+.main {
+  position: relative;
+}
+
+.login .sign-btn {
+  a {
+    text-decoration: none;
+    color: $green;
+    font-weight: bold;
+    text-shadow: 1px 1px $blackLight;
+    &:hover {
+      color: $silver;
+    }
+    &:focus {
+      color: $silver;
+    }
+  }
+}
+
+.border-dark {
+  @include placeholder($placeholder-color);
+  border: 1px solid $cherry;
+}
+
+.form-control {
+  border-color: $cherry;
+  outline: 0 none;
+  font-size: $text-size;
+  &:focus {
+    @extend .form-control;
+  }
+}
+
+.min-height {
+  min-height: 380px;
+  margin-top: 20px
+}
+
+.front {
+  p {
+    font-size: $text-size;
+  }
+}
+
+.login-screen {
+  background: url(../../img/background/cherry.jpg) center no-repeat fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.login-screen:before {
+  content: "";
+  background: $blackLight;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.login-center {
+  text-align: left;
+}
+
+.login {
+  width: 320px;
+  color: $green;
+  text-shadow: 1px 1px $blackLight;
+  margin: 100px 0 0 70px;
+  font-size: $text-size;
+  .login-form {
+    text-align: left;
+  }
+  label {
+    color: $green;
+    text-shadow: 1px 1px $blackLight;
+    &:hover, &:focus {
+      color: $silver;
+    }
+  }
+}
+
+.login-form .input-group {
+  .form-control {
+    @extend .input-group-addon;
+    height: 44px;
+    color: $silver;
+    box-shadow: none;
+  }
+  .input-group-addon {
+    background: none;
+  }
+}
+
+.login-form .input-group .input-group-addon .glyphicon {
+  color: $silver;
+}
+
+.login .sign-btn {
+  input.btn {
+    border: 2px solid $darkCherry;
+    background: $cherry;
+    width: 100%;
+    outline: none;
+    font-size: $text-size;
+    color: $silver;
+    &:hover {
+      background: $darkCherry;
+    }
+    &:focus {
+      background: $darkCherry;
+    }
+  }
+}
+
+.login .checkbox {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  input {
+    margin-top: 6px;
+  }
+}
+
+.login {
+  padding: 20px 0;
+  .forgot {
+    display: inline-block;
+    font-size: $text-size;
+  }
+}
+
+.sign-up {
+  margin-top: 20px;
+  color: $green;
+  text-shadow: 1px 1px $blackLight;
+}
+
+.input-relative {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.error-message {
+  position: absolute;
+  top: 105%;
+  right: 0;
+  font-size: $error !important;
+}
