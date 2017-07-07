@@ -6,8 +6,9 @@
   font-style: normal;
 }
 html, body {
-  width: 98%;
-  height: 98%;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 body {
@@ -27,15 +28,15 @@ h1 {
 
 .login .sign-btn a {
   text-decoration: none;
-  color: #048a19;
+  color: #d0caca;
   font-weight: bold;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
 }
 .login .sign-btn a:hover {
-  color: #d0caca;
+  color: #048a19;
 }
 .login .sign-btn a:focus {
-  color: #d0caca;
+  color: #048a19;
 }
 
 .border-dark {
@@ -43,14 +44,14 @@ h1 {
   border-radius: 8px;
 }
 .border-dark::-moz-placeholder {
-  color: #5f5b5b;
+  color: rgba(255, 255, 255, 0.3);
   opacity: 1;
 }
 .border-dark:-ms-input-placeholder {
-  color: #5f5b5b;
+  color: rgba(255, 255, 255, 0.3);
 }
 .border-dark::-webkit-input-placeholder {
-  color: #5f5b5b;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .border-dark-addon {
@@ -59,39 +60,37 @@ h1 {
   border-left: 0;
 }
 .border-dark-addon::-moz-placeholder {
-  color: #5f5b5b;
+  color: rgba(255, 255, 255, 0.3);
   opacity: 1;
 }
 .border-dark-addon:-ms-input-placeholder {
-  color: #5f5b5b;
+  color: rgba(255, 255, 255, 0.3);
 }
 .border-dark-addon::-webkit-input-placeholder {
-  color: #5f5b5b;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .form-control, .form-control:focus {
   border-color: #731121;
   outline: 0 none;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .min-height {
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
   min-height: 380px;
-  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .front p {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .login-screen {
-  background: url(../../img/background/cherry.jpg) center no-repeat fixed;
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  position: relative;
 }
 
 .login-screen:before {
@@ -106,24 +105,23 @@ h1 {
 
 .login-center {
   text-align: left;
+  position: absolute;
+  top: 15%;
 }
 
 .login {
-  width: 320px;
-  color: #048a19;
+  color: #d0caca;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
-  margin: 100px 0 0 70px;
-  font-size: 16px;
+  margin: 0 auto;
+  font-size: 15px;
+  width: 75%;
 }
 .login .login-form {
   text-align: left;
 }
 .login label {
-  color: #048a19;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
-}
-.login label:hover, .login label:focus {
   color: #d0caca;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
 }
 
 .login-form .input-group .form-control {
@@ -145,7 +143,7 @@ h1 {
   background: #731121;
   width: 100%;
   outline: none;
-  font-size: 16px;
+  font-size: 15px;
   color: #d0caca;
 }
 .login .sign-btn input.btn:hover {
@@ -164,18 +162,18 @@ h1 {
   width: 19px;
   height: 19px;
 }
-
-.login {
-  padding: 20px 0;
+.login .checkbox label span {
+  margin-left: 10px;
 }
+
 .login .forgot {
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .sign-up {
   margin-top: 20px;
-  color: #048a19;
+  color: #d0caca;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
 }
 
