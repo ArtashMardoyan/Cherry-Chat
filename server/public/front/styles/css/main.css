@@ -160,7 +160,9 @@ h1 {
   margin-bottom: 20px;
 }
 .login .checkbox input {
-  margin-top: 6px;
+  margin-top: 2px;
+  width: 19px;
+  height: 19px;
 }
 
 .login {
