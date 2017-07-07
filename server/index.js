@@ -8,6 +8,8 @@ const path = require('path');
 
 module.exports = {
     appStart: (app, configs, entry) => {
+        app.use(express.static(path.join(__dirname, configs.path)));
+
         app.engine('.html', require('ejs').__express);
         app.set('view engine', 'ejs');
         app.set('views', path.join(__dirname, configs.viewPath, 'post'));

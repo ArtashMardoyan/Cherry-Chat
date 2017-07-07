@@ -10,7 +10,7 @@ module.exports = {
         files: [{
             expand: true,
             cwd:'<%= project.img.src %>',
-            src: ['*.{png,jpg,gif,svg}'],
+            src: ['**/*.{png,jpg,gif,svg}'],
             dest: '<%= project.temp %>/img/'
         }]
     }

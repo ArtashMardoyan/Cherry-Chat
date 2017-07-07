@@ -1,0 +1,179 @@
+html, body {
+  @include size(100%, auto);
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Open-Sans';
+  position: relative;
+}
+
+h1 {
+  font-size: $heading-size;
+  color: $cherry;
+  text-shadow: 1px 1px $blackLight;
+}
+
+.main {
+  position: relative;
+}
+
+.login .sign-btn {
+  a {
+    text-decoration: none;
+    color: $silver;
+    font-weight: bold;
+    text-shadow: 1px 1px $blackLight;
+    &:hover {
+      color: $green;
+    }
+    &:focus {
+      color: $green;
+    }
+  }
+}
+
+.border-dark {
+  @include placeholder($placeholder-color);
+  border: 2px solid $cherry;
+  border-radius: 8px;
+}
+
+.border-dark-addon {
+  @include placeholder($placeholder-color);
+  border: 2px solid $cherry;
+  border-radius: 0 8px 8px 0 !important;
+  border-left: 0;
+}
+
+.form-control {
+  border-color: $cherry;
+  outline: 0 none;
+  font-size: $text-size;
+  &:focus {
+    @extend .form-control;
+  }
+}
+
+.min-height {
+  @include box-shadow(0 0 10px rgba(255,255,255,.5));
+  border-radius: 10px;
+  background: rgba(255,255,255,.2);
+  min-height: 380px;
+  padding-bottom: 20px;
+}
+
+.front {
+  p {
+    font-size: $text-size;
+  }
+}
+
+.login-screen {
+  position: relative;
+}
+
+.login-screen:before {
+  content: "";
+  background: $blackLight;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.login-center {
+  text-align: left;
+  position: absolute;
+  top: 15%
+}
+
+.login {
+  color: $silver;
+  text-shadow: 1px 1px $blackLight;
+  margin: 0 auto;
+  font-size: $text-size;
+  width: 75%;
+  .login-form {
+    text-align: left;
+  }
+  label {
+    color: $silver;
+    text-shadow: 1px 1px $blackLight;
+  }
+}
+
+.login-form .input-group {
+  .form-control {
+    @extend .input-group-addon;
+    height: 44px;
+    color: $silver;
+    box-shadow: none;
+  }
+  .input-group-addon {
+    background: none;
+  }
+}
+
+.login-form .input-group .input-group-addon .glyphicon {
+  color: $silver;
+}
+
+.login .sign-btn {
+  input.btn {
+    border: 2px solid $darkCherry;
+    border-radius: 8px;
+    background: $cherry;
+    width: 100%;
+    outline: none;
+    font-size: $text-size;
+    color: $silver;
+    &:hover {
+      background: $darkCherry;
+    }
+    &:focus {
+      background: $darkCherry;
+    }
+  }
+}
+
+.login .checkbox {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  input {
+    margin-top: 2px;
+    width: 19px;
+    height: 19px;
+  }
+  label {
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+.login {
+  .forgot {
+    display: inline-block;
+    font-size: $text-size;
+  }
+}
+
+.sign-up {
+  margin-top: 20px;
+  color: $silver;
+  text-shadow: 1px 1px $blackLight;
+}
+
+.input-relative {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.error-message {
+  position: absolute;
+  top: 105%;
+  right: 0;
+  font-size: $error !important;
+}

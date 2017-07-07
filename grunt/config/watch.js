@@ -19,7 +19,7 @@ module.exports = {
         tasks: ['jshint'],
     },
     sass: {
-        files: ['<%= project.styles.src %>/sass/*.scss'],
+        files: ['<%= project.styles.src %>/sass/**/*.scss'],
         tasks: ['sass'],
     },
 };
