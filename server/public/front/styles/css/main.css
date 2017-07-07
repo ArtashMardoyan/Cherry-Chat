@@ -39,7 +39,8 @@ h1 {
 }
 
 .border-dark {
-  border: 1px solid #731121;
+  border: 2px solid #731121;
+  border-radius: 8px;
 }
 .border-dark::-moz-placeholder {
   color: #5f5b5b;
@@ -49,6 +50,22 @@ h1 {
   color: #5f5b5b;
 }
 .border-dark::-webkit-input-placeholder {
+  color: #5f5b5b;
+}
+
+.border-dark-addon {
+  border: 2px solid #731121;
+  border-radius: 0 8px 8px 0 !important;
+  border-left: 0;
+}
+.border-dark-addon::-moz-placeholder {
+  color: #5f5b5b;
+  opacity: 1;
+}
+.border-dark-addon:-ms-input-placeholder {
+  color: #5f5b5b;
+}
+.border-dark-addon::-webkit-input-placeholder {
   color: #5f5b5b;
 }
 
@@ -124,6 +141,7 @@ h1 {
 
 .login .sign-btn input.btn {
   border: 2px solid #50131d;
+  border-radius: 8px;
   background: #731121;
   width: 100%;
   outline: none;

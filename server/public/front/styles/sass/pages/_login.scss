@@ -34,7 +34,15 @@ h1 {
 
 .border-dark {
   @include placeholder($placeholder-color);
-  border: 1px solid $cherry;
+  border: 2px solid $cherry;
+  border-radius: 8px;
+}
+
+.border-dark-addon{
+  @include placeholder($placeholder-color);
+  border: 2px solid $cherry;
+  border-radius: 0 8px 8px 0 !important;
+  border-left: 0;
 }
 
 .form-control {
@@ -118,6 +126,7 @@ h1 {
 .login .sign-btn {
   input.btn {
     border: 2px solid $darkCherry;
+    border-radius: 8px;
     background: $cherry;
     width: 100%;
     outline: none;
