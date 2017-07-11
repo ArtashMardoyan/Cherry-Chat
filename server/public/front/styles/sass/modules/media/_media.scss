@@ -1,0 +1,31 @@
+@media (max-width: 335px) {
+  @import "max335";
+}
+
+@media (min-width: 336px) and(max-width: 480px) {
+  @import "min336max480";
+}
+
+@media (max-width: 480px) and(min-height: 750px) {
+  @import "max480minHeight";
+}
+
+@media (min-width: 480px) and (max-width: 767px) and (max-height: 767px) {
+  @import "min481max767maxHeight767";
+}
+
+@media (min-width: 480px) and(max-width: 767px) and (min-height: 767px) {
+  @import "min481max767minHeight767";
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  @import "min768max992";
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  @import "min768max992";
+}
+
+@media (min-width: 993px) and (max-width: 1100px) {
+  @import "min993max1100";
+}

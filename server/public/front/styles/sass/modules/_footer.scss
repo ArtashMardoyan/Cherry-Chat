@@ -1,0 +1,12 @@
+footer {
+  position: absolute;
+  top: 95%;
+  height: 5%;
+  width: 100%;
+  .copy-right-text {
+    text-align: right;
+    .copy-right {
+      color: $silver;
+    }
+  }
+}
