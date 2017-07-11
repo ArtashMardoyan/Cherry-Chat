@@ -3,7 +3,7 @@
 <main class="login-screen">
     <div class="login-center">
         <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 min-height">
-            <h1 class="col-xs-12 text-center"><%= title %></h1>
+            <h1 class="col-xs-12 text-center"><%- texts['TITLE'] %></h1>
             <div class="col-xs-10 col-md-10 col-xs-offset-1 col-md-offset-1 minus-padding">
                 <div class="login text-center" id="card">
                     <div class="front signin_form">
@@ -29,13 +29,14 @@
                                     <p class="text-danger error-message"></p>
                                 </div>
                             </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox"><span class="remember">Remember me</span></label>
+                            <div class="body-checkbox">
+                                <input type="checkbox" class="checkbox" id="remember-me">
+                                <label for="remember-me">Remember me</label>
                             </div>
                             <div class="form-group sign-btn">
                                 <input type="submit" class="btn" value="Log in">
                                 <p class="sign-up">
-                                    <a href="#" class="forgot pull-left">New to TimeInfo?</a>
+                                    <a href="#" class="forgot pull-left">Forgot password ?</a>
                                     <a href="/signUp" id="flip-btn" class="signup signup_link pull-right">
                                         Sign up
                                     </a>
@@ -48,4 +49,4 @@
         </div>
     </div>
 
-<% include ./layout/partials/footer.ejs %>
+    <% include ./layout/partials/footer.ejs %>

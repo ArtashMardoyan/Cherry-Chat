@@ -17,7 +17,7 @@ h1 {
   a {
     text-shadow: 1px 1px $blackLight;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 100;
     color: $silver;
     &:hover {
       color: $green;
@@ -69,7 +69,7 @@ h1 {
   height: 100%;
 }
 
-.register-screen{
+.register-screen {
   @extend .login-screen
 }
 
@@ -83,7 +83,7 @@ h1 {
   top: 0;
 }
 
-.register-screen:before{
+.register-screen:before {
   @extend .login-screen:before
 }
 
@@ -148,21 +148,6 @@ h1 {
   }
 }
 
-.login .checkbox {
-  margin-bottom: 20px;
-  margin-top: 20px;
-  input {
-    margin-top: 2px;
-    height: 19px;
-    width: 19px;
-  }
-  label {
-    span {
-      margin-left: 10px;
-    }
-  }
-}
-
 .login {
   .forgot {
     display: inline-block;
@@ -210,4 +195,53 @@ h1 {
 .day-select {
   padding: 0;
   width: 25% !important;
+}
+
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+
+.checkbox + label {
+  cursor: pointer;
+}
+
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 30px;
+}
+
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 21px;
+  height: 20px;
+  border: 2px solid #731121;
+  border-radius: 2px;
+}
+
+.checkbox:checked + label:before {
+  top: -7px;
+  background: url("../../img/icon/cherry-checkbox-logo.png") no-repeat;
+  background-size: 100%;
+  width: 25px;
+  height: 30px;
+  border: none;
+}
+
+.body-checkbox {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: 100;
 }
