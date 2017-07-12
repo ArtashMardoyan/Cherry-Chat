@@ -5,6 +5,11 @@ module.exports = [
         handler: './handlers/home'
     },
     {
+        url: '/signUp',
+        method: 'get',
+        handler: './handlers/signUp'
+    },
+    {
         url: '/404',
         method: 'get',
         handler: './handlers/404'

@@ -1,0 +1,23 @@
+.login-screen {
+  height: 145%;
+  .login-center {
+    top: 10%;
+    margin: 0 50px;
+  }
+}
+
+.register-screen {
+  height: 220%;
+  .register-center {
+    top: 7%;
+    margin: 0 50px;
+  }
+}
+
+.copy-right-text {
+  text-align: center !important;
+}
+
+.login .sign-btn a:hover {
+    color: $silver;
+}

@@ -2,5 +2,9 @@
   "home": {
     "description": "Specify your description for this page",
     "keywords": "Specify your keywords for this page"
+  },
+  "signUp":{
+    "description": "Specify your description for this page",
+    "keywords": "Specify your keywords for this page"
   }
 }

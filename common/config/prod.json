@@ -2,6 +2,8 @@
   "port": "8000",
   "name": "express-boilerplate-mvc",
   "endpoints": "../endpoints/",
+  "baseUrl":"https://cherrychat.com",
+  "title":"Cherry Chat",
   "front": {
     "path": "public/front/",
     "viewPath": "public/front/views/"
