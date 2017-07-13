@@ -3,13 +3,9 @@
   top: 22%;
 }
 
-.register-screen {
-  height: 100%;
-  background-attachment: fixed;
-  .register-center {
-    margin: 0 30px;
-    top: 5%;
-  }
+.register-center {
+  margin: 0 30px;
+  top: 5%;
 }
 
 .login {
@@ -66,6 +62,6 @@ h1 {
   font-size: $text-size-max480;
 }
 
-.login{
+.login {
   font-size: $text-size-max480;
 }

@@ -8,113 +8,63 @@
                 <div class="login text-center" id="card">
                     <div class="front signin_form">
                         <p>Register with a new account</p>
-                        <form class="login-form">
+                        <form class="login-form" id="loginForm">
                             <div class="form-group col-sm-6 col-xs-12">
                                 <div class="input-group input-relative">
                                     <input type="text" class="form-control border-dark"
-                                           placeholder="Full name">
+                                           placeholder="Full name" name="fullName" id="fullName" autocomplete="off">
                                     <span class="input-group-addon border-dark-addon">
                                         <i class="glyphicon glyphicon-user"></i>
                                     </span>
-                                    <p class="text-danger error-message"></p>
                                 </div>
                                 <div class="input-group input-relative">
                                     <input type="text" class="form-control border-dark"
-                                           placeholder="Email">
+                                           placeholder="Email" name="email" id="email" autocomplete="off">
                                     <span class="input-group-addon border-dark-addon">
                                         <i class="glyphicon glyphicon-envelope"></i>
                                     </span>
-                                    <p class="text-danger error-message"></p>
                                 </div>
                                 <div class="input-group input-relative">
-                                    <select name="gender" class="form-control border-dark">
-                                        <option>male</option>
-                                        <option>female</option>
+                                    <select name="gender" class=" form-control border-dark" id="gender">
+                                        <option value="Gender">Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
                                     </select>
                                     <span class="input-group-addon border-dark-addon">
                                         <i class="fa fa-venus-mars"></i>
                                     </span>
-                                    <p class="text-danger error-message"></p>
                                 </div>
                             </div>
                             <div class="form-group col-sm-6 col-xs-12">
                                 <div class="input-group input-relative">
                                     <input type="password" class="form-control border-dark"
-                                           placeholder="Password">
+                                           placeholder="Password" name="password" id="password" autocomplete="off">
                                     <span class="input-group-addon border-dark-addon">
                                         <i class="glyphicon glyphicon-lock"></i>
                                     </span>
-                                    <p class="text-danger error-message"></p>
                                 </div>
                                 <div class="input-group input-relative">
-                                    <input type="text" class="form-control border-dark"
-                                           placeholder="Repeat password">
+                                    <input type="password" class="form-control border-dark"
+                                           placeholder="Repeat password" name="rePassword" id="rePassword"
+                                           autocomplete="off">
                                     <span class="input-group-addon border-dark-addon">
                                         <i class="glyphicon glyphicon-lock"></i>
                                     </span>
-                                    <p class="text-danger error-message"></p>
                                 </div>
                                 <div class="input-group input-relative">
-                                    <select name="year" class="form-control border-dark year-select">
-                                        <option>1991</option>
-                                        <option>1992</option>
-                                        <option>1993</option>
-                                        <option>1994</option>
-                                        <option>1995</option>
-                                        <option>1996</option>
-                                        <option>1997</option>
+                                    <select name="year" class="form-control border-dark year-select " id="year">
+                                        <option value="0">Year</option>
                                     </select>
-                                    <select name="mount" class="form-control border-dark mount-select">
-                                        <option>January</option>
-                                        <option>February</option>
-                                        <option>March</option>
-                                        <option>April</option>
-                                        <option>May</option>
-                                        <option>June</option>
-                                        <option>July</option>
-                                        <option>August</option>
-                                        <option>September</option>
-                                        <option>October</option>
-                                        <option>November</option>
-                                        <option>December</option>
+                                    <select name="month" class="form-control border-dark month-select"
+                                            id="month">
+                                        <option value="0">Month</option>
                                     </select>
-                                    <select name="day" class="form-control border-dark day-select">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                        <option>7</option>
-                                        <option>8</option>
-                                        <option>9</option>
-                                        <option>10</option>
-                                        <option>11</option>
-                                        <option>12</option>
-                                        <option>13</option>
-                                        <option>14</option>
-                                        <option>15</option>
-                                        <option>16</option>
-                                        <option>17</option>
-                                        <option>18</option>
-                                        <option>19</option>
-                                        <option>20</option>
-                                        <option>21</option>
-                                        <option>22</option>
-                                        <option>23</option>
-                                        <option>24</option>
-                                        <option>25</option>
-                                        <option>26</option>
-                                        <option>27</option>
-                                        <option>28</option>
-                                        <option>29</option>
-                                        <option>30</option>
-                                        <option>31</option>
+                                    <select name="day" class="form-control border-dark day-select" id="day">
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group sign-btn col-xs-12">
-                                <input type="submit" class="btn" value="Sing in">
+                                <input type="submit" class="btn" value="Sing in" id="submitBtn">
                                 <p class="sign-up">
                                     <a href="/" id="flip-btn" class="signup signup_link pull-right">
                                         Log in

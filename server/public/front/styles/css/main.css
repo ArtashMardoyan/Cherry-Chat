@@ -63,11 +63,12 @@ h1 {
 }
 
 .form-control, .form-control:focus {
+  font-size: 12px !important;
   border-color: #731121;
-  font-size: 15px;
   outline: 0 none;
 }
 .form-control:focus {
+  font-size: 12px !important;
   transition: all 0.2s ease-out;
   border-color: #50131d;
 }
@@ -102,7 +103,6 @@ h1 {
 }
 
 .login-center, .register-center {
-  text-align: left;
   position: absolute;
   top: 23%;
 }
@@ -130,8 +130,8 @@ h1 {
 }
 
 .login-form .input-group .form-control {
+  color: #d0caca !important;
   box-shadow: none;
-  color: #d0caca;
   height: 44px;
 }
 .login-form .input-group .input-group-addon, .login-form .input-group .form-control {
@@ -173,8 +173,9 @@ h1 {
   width: 100%;
 }
 
-.error-message {
+.error {
   font-size: 12px !important;
+  color: #ef302d !important;
   position: absolute;
   top: 105%;
   right: 0;
@@ -187,20 +188,21 @@ h1 {
 }
 
 .year-select {
-  padding: 0;
+  padding: 5px 5px 5px 2px;
   width: 30% !important;
 }
 
-.mount-select {
+.month-select {
   border-right: none;
   border-left: none;
-  padding: 5px 5px 5px 0;
-  width: 45% !important;
+  padding: 5px 5px 5px 2px;
+  width: 44% !important;
 }
 
 .day-select {
-  padding: 0;
-  width: 25% !important;
+  padding: 5px 5px 5px 2px;
+  width: 26% !important;
+  border-radius: 0 8px 8px 0 !important;
 }
 
 .checkbox {
@@ -236,12 +238,12 @@ h1 {
 }
 
 .checkbox:checked + label:before {
-  top: -7px;
   background: url("../../img/icon/cherry-checkbox-logo.png") no-repeat;
   background-size: 100%;
   width: 25px;
   height: 30px;
   border: none;
+  top: -7px;
 }
 
 .body-checkbox {
@@ -250,6 +252,10 @@ h1 {
 
 label {
   font-weight: 100;
+}
+
+select option:first-child {
+  display: none;
 }
 
 footer {
@@ -288,12 +294,12 @@ footer .copy-right-text .copy-right {
   }
 
   .login .forgot, .front p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .login .checkbox label span {
     margin-left: 5px;
-    font-size: 13px;
+    font-size: 8px !important;
   }
 
   .login .checkbox input {
@@ -303,7 +309,7 @@ footer .copy-right-text .copy-right {
   }
 
   .login .sign-btn a:hover {
-    font-size: 13px;
+    font-size: 8px !important;
   }
   .login .sign-btn a:hover:hover {
     color: #d0caca;
@@ -311,7 +317,7 @@ footer .copy-right-text .copy-right {
 
   .login-form .input-group .form-control {
     height: 33px;
-    font-size: 13px;
+    font-size: 8px !important;
   }
 
   .login .sign-btn input.btn {
@@ -329,11 +335,11 @@ footer .copy-right-text .copy-right {
 
   .copy-right-text {
     text-align: center !important;
-    font-size: 13px;
+    font-size: 8px !important;
   }
 
   .login {
-    font-size: 13px;
+    font-size: 8px !important;
   }
 }
 @media (min-width: 336px) and (max-width: 480px) {
@@ -342,11 +348,7 @@ footer .copy-right-text .copy-right {
     top: 22%;
   }
 
-  .register-screen {
-    height: 100%;
-    background-attachment: fixed;
-  }
-  .register-screen .register-center {
+  .register-center {
     margin: 0 30px;
     top: 5%;
   }
@@ -360,12 +362,12 @@ footer .copy-right-text .copy-right {
   }
 
   .login .forgot, .front p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .login .checkbox label span {
     margin-left: 5px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .login .checkbox input {
@@ -375,7 +377,7 @@ footer .copy-right-text .copy-right {
   }
 
   .login .sign-btn a:hover {
-    font-size: 13px;
+    font-size: 12px;
   }
   .login .sign-btn a:hover:hover {
     color: #d0caca;
@@ -383,7 +385,7 @@ footer .copy-right-text .copy-right {
 
   .login-form .input-group .form-control {
     height: 33px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .login .sign-btn input.btn {
@@ -401,11 +403,11 @@ footer .copy-right-text .copy-right {
 
   .copy-right-text {
     text-align: center !important;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .login {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 @media (max-width: 480px) and (min-height: 750px) {
@@ -414,11 +416,7 @@ footer .copy-right-text .copy-right {
     top: 25%;
   }
 
-  .register-screen {
-    height: 100%;
-    background-attachment: fixed;
-  }
-  .register-screen .register-center {
+  .register-center {
     margin: 0 30px;
     top: 14%;
   }
@@ -432,12 +430,12 @@ footer .copy-right-text .copy-right {
   }
 
   .login .forgot, .front p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .login .checkbox label span {
     margin-left: 5px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .login .checkbox input {
@@ -447,7 +445,7 @@ footer .copy-right-text .copy-right {
   }
 
   .login .sign-btn a:hover {
-    font-size: 13px;
+    font-size: 12px;
   }
   .login .sign-btn a:hover:hover {
     color: #d0caca;
@@ -455,7 +453,7 @@ footer .copy-right-text .copy-right {
 
   .login-form .input-group .form-control {
     height: 32px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .login .sign-btn input.btn {
@@ -473,11 +471,11 @@ footer .copy-right-text .copy-right {
 
   .copy-right-text {
     text-align: center !important;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .login {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) and (max-height: 767px) {
@@ -506,25 +504,19 @@ footer .copy-right-text .copy-right {
   }
 }
 @media (min-width: 480px) and (max-width: 767px) and (min-height: 767px) {
-  .login-screen, .register-screen {
-    height: 100%;
-  }
-  .login-screen .login-center, .register-screen .login-center, .login-screen .register-center, .register-screen .register-center {
+  .login-center, .register-center {
     top: 25%;
     margin: 0 50px;
   }
 
-  .register-screen {
-    height: 100%;
-  }
-  .register-screen .register-center {
+  .register-center {
     top: 13%;
     margin: 0 50px;
   }
 
   .copy-right-text {
     text-align: center !important;
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {

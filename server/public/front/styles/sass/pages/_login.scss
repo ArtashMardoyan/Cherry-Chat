@@ -39,10 +39,11 @@ h1 {
 }
 
 .form-control {
+  font-size: $text-size-max480 !important;
   border-color: $cherry;
-  font-size: $text-size;
   outline: 0 none;
   &:focus {
+    font-size: $text-size-max480 !important;
     transition: all 0.2s ease-out;
     border-color: $darkCherry;
     @extend .form-control;
@@ -88,7 +89,6 @@ h1 {
 }
 
 .login-center {
-  text-align: left;
   position: absolute;
   top: 23%
 }
@@ -119,8 +119,8 @@ h1 {
 .login-form .input-group {
   .form-control {
     @extend .input-group-addon;
+    color: $silver !important;
     box-shadow: none;
-    color: $silver;
     height: 44px;
   }
   .input-group-addon {
@@ -167,8 +167,9 @@ h1 {
   width: 100%;
 }
 
-.error-message {
+.error {
   font-size: $error !important;
+  color: #ef302d !important;
   position: absolute;
   top: 105%;
   right: 0;
@@ -181,20 +182,21 @@ h1 {
 }
 
 .year-select {
-  padding: 0;
+  padding: 5px 5px 5px 2px;
   width: 30% !important;
 }
 
-.mount-select {
+.month-select {
   border-right: none;
   border-left: none;
-  padding: 5px 5px 5px 0;
-  width: 45% !important;
+  padding: 5px 5px 5px 2px;
+  width: 44% !important;
 }
 
 .day-select {
-  padding: 0;
-  width: 25% !important;
+  padding: 5px 5px 5px 2px;
+  width: 26% !important;
+  border-radius: 0 8px 8px 0 !important;
 }
 
 .checkbox {
@@ -230,12 +232,12 @@ h1 {
 }
 
 .checkbox:checked + label:before {
-  top: -7px;
   background: url("../../img/icon/cherry-checkbox-logo.png") no-repeat;
   background-size: 100%;
   width: 25px;
   height: 30px;
   border: none;
+  top: -7px;
 }
 
 .body-checkbox {
@@ -244,4 +246,8 @@ h1 {
 
 label {
   font-weight: 100;
+}
+
+select option:first-child {
+  display: none;
 }

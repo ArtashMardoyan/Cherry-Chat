@@ -25,7 +25,7 @@ h1 {
 
 .login .checkbox label span {
   margin-left: 5px;
-  font-size: $text-size-max480;
+  font-size: $text-size-max335 !important;;
 }
 
 .login .checkbox input {
@@ -34,7 +34,7 @@ h1 {
 }
 
 .login .sign-btn a:hover {
-  font-size: $text-size-max480;
+  font-size: $text-size-max335 !important;
   &:hover {
     color: $silver;
   }
@@ -43,7 +43,7 @@ h1 {
 .login-form .input-group {
   .form-control {
     height: 33px;
-    font-size: $text-size-max480;
+    font-size: $text-size-max335 !important;
   }
 }
 
@@ -62,9 +62,9 @@ h1 {
 
 .copy-right-text {
   text-align: center !important;
-  font-size: $text-size-max480;
+  font-size: $text-size-max335 !important;;
 }
 
-.login{
-  font-size: $text-size-max480;
+.login {
+  font-size: $text-size-max335 !important;;
 }

@@ -1,20 +1,14 @@
-.login-screen {
-  height: 100%;
-  .login-center {
-    top: 25%;
-    margin: 0 50px;
-  }
+.login-center {
+  top: 25%;
+  margin: 0 50px;
 }
 
-.register-screen {
-  height: 100%;
-  .register-center {
-    top: 13%;
-    margin: 0 50px;
-  }
+.register-center {
+  top: 13%;
+  margin: 0 50px;
 }
 
-.copy-right-text{
+.copy-right-text {
   text-align: center !important;
   font-size: $text-size-max480;
 }
