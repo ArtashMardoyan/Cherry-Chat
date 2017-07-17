@@ -7,7 +7,7 @@
 }
 
 @media (max-width: 480px) and(min-height: 750px) {
-  @import "max480minHeight";
+  @import "max480minHeight750";
 }
 
 @media (min-width: 480px) and (max-width: 767px) and (max-height: 767px) {
@@ -28,4 +28,8 @@
 
 @media (min-width: 993px) and (max-width: 1100px) {
   @import "min993max1100";
+}
+
+@media (min-width: 1100px){
+  @import "min1100";
 }

@@ -22,6 +22,7 @@ module.exports = (grunt) => {
         'clean',
         'jshint',
         'concat',
+        'babel',
         'bower_concat',
         'uglify',
         'sass',
