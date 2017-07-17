@@ -21,6 +21,33 @@ h1 {
   color: #731121;
 }
 
+.login-screen, .register-screen {
+  position: relative;
+  background: url(../../img/background/cherry.jpg) center fixed;
+  background-size: cover;
+  height: 100%;
+}
+
+.login-screen:before, .register-screen:before {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  left: 0;
+  top: 0;
+}
+
+.login-center {
+  position: absolute;
+  top: 23%;
+}
+
+.register-center {
+  position: absolute;
+  top: 20%;
+}
+
 .login .sign-btn a {
   text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
   text-decoration: none;
@@ -63,12 +90,11 @@ h1 {
 }
 
 .form-control, .form-control:focus {
-  font-size: 12px !important;
   border-color: #731121;
   outline: 0 none;
+  font-size: 12px;
 }
 .form-control:focus {
-  font-size: 12px !important;
   transition: all 0.2s ease-out;
   border-color: #50131d;
 }
@@ -83,32 +109,6 @@ h1 {
 
 .front p {
   font-size: 15px;
-}
-
-.login-screen, .register-screen {
-  position: relative;
-  background: url(../../img/background/cherry.jpg) center fixed;
-  background-size: cover;
-  height: 100%;
-}
-
-.login-screen:before, .register-screen:before {
-  background: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  content: "";
-  left: 0;
-  top: 0;
-}
-
-.login-center, .register-center {
-  position: absolute;
-  top: 23%;
-}
-
-.register-center {
-  top: 20%;
 }
 
 .login {
@@ -132,7 +132,7 @@ h1 {
 .login-form .input-group .form-control {
   color: #d0caca !important;
   box-shadow: none;
-  height: 44px;
+  height: 38px;
 }
 .login-form .input-group .input-group-addon, .login-form .input-group .form-control {
   background: none;
@@ -181,28 +181,15 @@ h1 {
   right: 0;
 }
 
+.error-date {
+  font-size: 12px !important;
+  color: #ef302d !important;
+}
+
 .register-message {
   font-weight: bold;
   margin-top: 12%;
   color: #dedede;
-}
-
-.year-select {
-  padding: 5px 5px 5px 2px;
-  width: 30% !important;
-}
-
-.month-select {
-  border-right: none;
-  border-left: none;
-  padding: 5px 5px 5px 2px;
-  width: 44% !important;
-}
-
-.day-select {
-  padding: 5px 5px 5px 2px;
-  width: 26% !important;
-  border-radius: 0 8px 8px 0 !important;
 }
 
 .checkbox {
@@ -258,6 +245,75 @@ select option:first-child {
   display: none;
 }
 
+.select-date {
+  padding: 0;
+}
+.select-date .btn-group {
+  width: 100% !important;
+}
+.select-date button, .select-date button:hover, .select-date button:focus, .select-date button:active {
+  border: 2px solid #731121;
+  background-color: transparent;
+  color: #d0caca;
+}
+.select-date button:focus {
+  border: 2px solid #50131d;
+}
+.select-date .dropdown-menu ul > :first-child {
+  display: none;
+}
+
+.select-year button, .select-year .select-date button:hover, .select-date .select-year button:hover, .select-year .select-date button:focus, .select-date .select-year button:focus, .select-year .select-date button:active, .select-date .select-year button:active, .select-year .select-gender button:hover, .select-gender .select-year button:hover, .select-year .select-gender button:focus, .select-gender .select-year button:focus, .select-year .select-gender button:active, .select-gender .select-year button:active {
+  border-radius: 8px 0 0 8px !important;
+  padding: 6px 6px 6px 3px;
+}
+.select-year button span, .select-year .select-date button:hover span, .select-date .select-year button:hover span, .select-year .select-date button:focus span, .select-date .select-year button:focus span, .select-year .select-date button:active span, .select-date .select-year button:active span, .select-year .select-gender button:hover span, .select-gender .select-year button:hover span, .select-year .select-gender button:focus span, .select-gender .select-year button:focus span, .select-year .select-gender button:active span, .select-gender .select-year button:active span {
+  font-size: 12px;
+}
+
+.select-month button, .select-month .select-date button:hover, .select-date .select-month button:hover, .select-month .select-date button:focus, .select-date .select-month button:focus, .select-month .select-date button:active, .select-date .select-month button:active, .select-month .select-gender button:hover, .select-gender .select-month button:hover, .select-month .select-gender button:focus, .select-gender .select-month button:focus, .select-month .select-gender button:active, .select-gender .select-month button:active {
+  border-right: none !important;
+  border-left: none !important;
+  padding: 6px 6px 6px 3px;
+  border-radius: 0;
+}
+.select-month button span, .select-month .select-date button:hover span, .select-date .select-month button:hover span, .select-month .select-date button:focus span, .select-date .select-month button:focus span, .select-month .select-date button:active span, .select-date .select-month button:active span, .select-month .select-gender button:hover span, .select-gender .select-month button:hover span, .select-month .select-gender button:focus span, .select-gender .select-month button:focus span, .select-month .select-gender button:active span, .select-gender .select-month button:active span {
+  font-size: 12px;
+}
+
+.select-day button, .select-day .select-date button:hover, .select-date .select-day button:hover, .select-day .select-date button:focus, .select-date .select-day button:focus, .select-day .select-date button:active, .select-date .select-day button:active, .select-day .select-gender button:hover, .select-gender .select-day button:hover, .select-day .select-gender button:focus, .select-gender .select-day button:focus, .select-day .select-gender button:active, .select-gender .select-day button:active {
+  border-radius: 0 8px 8px 0 !important;
+  padding: 6px 6px 6px 3px;
+}
+.select-day button span, .select-day .select-date button:hover span, .select-date .select-day button:hover span, .select-day .select-date button:focus span, .select-date .select-day button:focus span, .select-day .select-date button:active span, .select-date .select-day button:active span, .select-day .select-gender button:hover span, .select-gender .select-day button:hover span, .select-day .select-gender button:focus span, .select-gender .select-day button:focus span, .select-day .select-gender button:active span, .select-gender .select-day button:active span {
+  font-size: 12px;
+}
+
+.select-gender .error {
+  margin-right: -23%;
+}
+.select-gender .btn-group {
+  width: 100%;
+}
+.select-gender button, .select-gender button:hover, .select-gender button:focus, .select-gender button:active {
+  border: 2px solid #731121;
+  background-color: transparent;
+  color: #d0caca;
+}
+.select-gender button:focus {
+  border: 2px solid #50131d;
+}
+.select-gender button span, .select-gender button:hover span, .select-gender button:focus span, .select-gender button:active span {
+  font-size: 12px;
+}
+.select-gender .dropdown-menu ul > :first-child {
+  display: none;
+}
+
+.bootstrap-select .dropdown-toggle:focus {
+  outline: none !important;
+}
+
 footer {
   position: absolute;
   top: 95%;
@@ -272,217 +328,210 @@ footer .copy-right-text .copy-right {
 }
 
 @media (max-width: 335px) {
-  .login-center, .register-center {
-    margin: 0 30px;
-    top: 10%;
+  .login-screen .login-center, .register-screen .login-center {
+    padding: 0 20px;
+    top: 20%;
   }
 
   .register-screen {
-    height: 135%;
+    height: 105%;
+  }
+  .register-screen .register-center {
+    padding: 0 20px;
+    top: 5%;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .minus-padding {
+    padding: 0;
+  }
+
+  .login {
+    width: 100%;
+  }
+  .login .login-form .input-group .form-control {
+    height: 33px;
+  }
+  .login .forgot, .login .front p {
+    font-size: 12px;
+  }
+  .login .checkbox input {
+    margin-top: 5px;
+    width: 15px;
+    height: 15px;
+  }
+  .login .select-month button, .login .select-day button, .login .select-year button {
+    padding: 5px 5px 5px 3px !important;
+  }
+  .login .select-month button span, .login .select-day button span, .login .select-year button span {
+    font-size: 9px;
+    padding-top: 3px;
+  }
+  .login .select-gender .error {
+    margin-right: -17%;
+  }
+  .login .checkbox + label {
+    padding: 3px 0 0 30px !important;
+    font-size: 12px;
+  }
+  .login .sign-btn a:hover {
+    color: #d0caca;
+  }
+  .login .sign-btn input.btn {
+    height: 32px;
+    padding-top: 3px;
+  }
+  .login .sign-btn .sign-up {
+    margin-top: 10px;
+  }
+
+  .copy-right-text {
+    text-align: center !important;
+    font-size: 12px;
+  }
+}
+@media (min-width: 336px) and (max-width: 480px) {
+  .login-screen .login-center, .register-screen .login-center {
+    margin: 0 30px;
+    top: 22%;
+  }
+
+  .register-screen {
+    height: 102%;
   }
   .register-screen .register-center {
     margin: 0 30px;
     top: 5%;
   }
 
-  .login {
-    width: 100%;
-  }
-
   h1 {
     font-size: 32px;
-  }
-
-  .login .forgot, .front p {
-    font-size: 12px;
-  }
-
-  .login .checkbox label span {
-    margin-left: 5px;
-    font-size: 8px !important;
-  }
-
-  .login .checkbox input {
-    margin-top: 5px;
-    width: 15px;
-    height: 15px;
-  }
-
-  .login .sign-btn a:hover {
-    font-size: 8px !important;
-  }
-  .login .sign-btn a:hover:hover {
-    color: #d0caca;
-  }
-
-  .login-form .input-group .form-control {
-    height: 33px;
-    font-size: 8px !important;
-  }
-
-  .login .sign-btn input.btn {
-    height: 32px;
-    padding-top: 3px;
-  }
-
-  .sign-up {
-    margin-top: 10px;
   }
 
   .minus-padding {
     padding: 0;
   }
 
-  .copy-right-text {
-    text-align: center !important;
-    font-size: 8px !important;
-  }
-
-  .login {
-    font-size: 8px !important;
-  }
-}
-@media (min-width: 336px) and (max-width: 480px) {
-  .login-center, .register-center {
-    margin: 0 30px;
-    top: 22%;
-  }
-
-  .register-center {
-    margin: 0 30px;
-    top: 5%;
-  }
-
   .login {
     width: 100%;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  .login .forgot, .front p {
     font-size: 12px;
   }
-
-  .login .checkbox label span {
-    margin-left: 5px;
+  .login .forgot, .login .front p {
     font-size: 12px;
   }
-
   .login .checkbox input {
     margin-top: 5px;
     width: 15px;
     height: 15px;
   }
-
-  .login .sign-btn a:hover {
-    font-size: 12px;
+  .login .checkbox + label {
+    padding: 2px 0 0 30px !important;
+    font-size: 14px !important;
   }
-  .login .sign-btn a:hover:hover {
-    color: #d0caca;
+  .login .select-month button, .login .select-day button, .login .select-year button {
+    padding: 5px 5px 5px 3px !important;
   }
-
-  .login-form .input-group .form-control {
-    height: 33px;
-    font-size: 12px;
-  }
-
-  .login .sign-btn input.btn {
-    height: 32px;
+  .login .select-month button span, .login .select-day button span, .login .select-year button span {
+    font-size: 9px;
     padding-top: 3px;
   }
-
-  .sign-up {
-    margin-top: 10px;
+  .login .select-gender .error {
+    margin-right: -23%;
   }
-
-  .minus-padding {
-    padding: 0;
+  .login .select-gender button span {
+    font-size: 12px;
+  }
+  .login .sign-btn a:hover {
+    color: #d0caca;
+  }
+  .login .sign-btn input.btn {
+    height: 34px;
+    padding-top: 3px;
+  }
+  .login .sign-btn .sign-up {
+    margin-top: 10px;
   }
 
   .copy-right-text {
     text-align: center !important;
-    font-size: 12px;
+    font-size: 14px !important;
   }
 
-  .login {
+  .input-relative .form-control {
     font-size: 12px;
   }
 }
 @media (max-width: 480px) and (min-height: 750px) {
-  .login-center, .register-center {
+  .login-screen .login-center, .register-screen .login-center {
     margin: 0 30px;
-    top: 25%;
+    top: 24%;
   }
 
-  .register-center {
+  .register-screen .register-center {
     margin: 0 30px;
-    top: 14%;
-  }
-
-  .login {
-    width: 100%;
+    top: 10%;
   }
 
   h1 {
     font-size: 32px;
-  }
-
-  .login .forgot, .front p {
-    font-size: 12px;
-  }
-
-  .login .checkbox label span {
-    margin-left: 5px;
-    font-size: 12px;
-  }
-
-  .login .checkbox input {
-    margin-top: 5px;
-    width: 15px;
-    height: 15px;
-  }
-
-  .login .sign-btn a:hover {
-    font-size: 12px;
-  }
-  .login .sign-btn a:hover:hover {
-    color: #d0caca;
-  }
-
-  .login-form .input-group .form-control {
-    height: 32px;
-    font-size: 12px;
-  }
-
-  .login .sign-btn input.btn {
-    height: 32px;
-    padding-top: 3px;
-  }
-
-  .sign-up {
-    margin-top: 10px;
   }
 
   .minus-padding {
     padding: 5px;
   }
 
-  .copy-right-text {
-    text-align: center !important;
-    font-size: 12px;
+  .login {
+    width: 100%;
+    font-size: 14px !important;
+  }
+  .login .login-form .input-group .form-control {
+    height: 40px;
+    font-size: 14px !important;
+  }
+  .login .forgot, .login .front p {
+    font-size: 14px !important;
+  }
+  .login .checkbox input {
+    margin-top: 5px;
+    width: 15px;
+    height: 15px;
+  }
+  .login .checkbox + label {
+    padding: 2px 0 0 30px !important;
+    font-size: 14px !important;
+  }
+  .login .select-month button, .login .select-day button, .login .select-year button {
+    padding: 5px 5px 5px 3px !important;
+  }
+  .login .select-month button span, .login .select-day button span, .login .select-year button span {
+    font-size: 9px;
+    padding-top: 3px;
+  }
+  .login .sign-btn a:hover {
+    font-size: 14px !important;
+    color: #d0caca;
+  }
+  .login .sign-btn input.btn {
+    height: 40px;
+    padding-top: 3px;
+  }
+  .login .sign-btn .sign-up {
+    margin-top: 10px;
   }
 
-  .login {
-    font-size: 12px;
+  .copy-right-text {
+    text-align: center !important;
+    font-size: 14px !important;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) and (max-height: 767px) {
   .login-screen, .register-screen {
     height: 145%;
   }
-  .login-screen .login-center, .register-screen .login-center, .login-screen .register-center, .register-screen .register-center {
+  .login-screen .login-center, .register-screen .login-center {
     top: 10%;
     margin: 0 50px;
   }
@@ -502,9 +551,20 @@ footer .copy-right-text .copy-right {
   .login .sign-btn a:hover {
     color: #d0caca;
   }
+
+  .select-gender .error {
+    margin-right: -13%;
+  }
+  .select-gender button span, .select-gender button:hover span, .select-gender button:focus span, .select-gender button:active span {
+    font-size: 12px;
+  }
+
+  .input-relative .form-control {
+    font-size: 12px;
+  }
 }
 @media (min-width: 480px) and (max-width: 767px) and (min-height: 767px) {
-  .login-center, .register-center {
+  .login-center {
     top: 25%;
     margin: 0 50px;
   }
@@ -520,7 +580,7 @@ footer .copy-right-text .copy-right {
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  .login-center, .register-center {
+  .login-center {
     margin: 0 50px;
     top: 20%;
   }
@@ -532,10 +592,14 @@ footer .copy-right-text .copy-right {
 
   h1 {
     font-size: 36px;
+  }
+
+  .select-gender .error {
+    margin-right: -21%;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  .login-center, .register-center {
+  .login-center {
     margin: 0 50px;
     top: 20%;
   }
@@ -548,13 +612,22 @@ footer .copy-right-text .copy-right {
   h1 {
     font-size: 36px;
   }
+
+  .select-gender .error {
+    margin-right: -21%;
+  }
 }
 @media (min-width: 993px) and (max-width: 1100px) {
-  .login-center, .register-center {
+  .login-center {
     top: 17%;
   }
 
   .register-center {
     top: 15%;
+  }
+}
+@media (min-width: 1100px) {
+  .login-center {
+    width: 100%;
   }
 }

@@ -13,10 +13,12 @@ $(function () {
     for (let i = minAge; i > maxAge; i -= 1) {
         years.append($('<option />').val(i).html(i));
     }
+    years.selectpicker('refresh');
 
     for (let i = 1; i < month.length + 1; i += 1) {
         months.append($('<option />').val(`0${i}`).html(month[i - 1]));
     }
+    months.selectpicker('refresh');
 
     function updateNumberOfDays() {
         days.html('');
@@ -27,10 +29,13 @@ $(function () {
         for (let i = 1; i < day + 1; i += 1) {
             days.append($('<option />').val(i).html(i));
         }
+        days.selectpicker('refresh');
     }
 
     function daysInMonth(month, year) {
-        return moment(`${year}-${month}`).daysInMonth();
+        if (year !== '0' && month !== '0') {
+            return moment(`${year}-${month}`, "YYYY-MM").daysInMonth();
+        }
     }
 
     $('#year, #month').change(function () {

@@ -2,7 +2,7 @@
 
 (function ($) {
     const loginForm = $('#loginForm');
-    
+
     const validate = {
         rules: {
             fullName: {
@@ -26,14 +26,15 @@
             gender: {
                 checkGender: true
             },
-            year: {
-                checkDate: true
-            },
-            month: {
-                checkDate: true
-            },
             day: {
-                checkDate: true
+                checkDate: true,
+            }
+        },
+        errorPlacement: function (err, elem) {
+            if (elem.attr('name') === 'day') {
+                err.appendTo('.error-date')
+            }else{
+                err.insertAfter(elem)
             }
         }
     };
@@ -56,7 +57,7 @@
 
     $.validator.addMethod('checkDate', function (value) {
         return value !== '0';
-    }, 'Please choose your date Of Birth');
+    }, 'Please choose day of birth');
 
 
     loginForm.validate(Object.assign(validate));

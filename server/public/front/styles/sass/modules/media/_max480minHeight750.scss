@@ -1,15 +1,14 @@
 .login-screen {
   .login-center {
-    padding: 0 20px;
-    top: 20%;
+    margin: 0 30px;
+    top: 24%;
   }
 }
 
 .register-screen {
-  height: 105%;
   .register-center {
-    padding: 0 20px;
-    top: 5%;
+    margin: 0 30px;
+    top: 10%;
   }
 }
 
@@ -18,18 +17,22 @@ h1 {
 }
 
 .minus-padding {
-  padding: 0;
+  padding: 5px;
 }
 
 .login {
   width: 100%;
+  font-size: $text-size-max480Height750 !important;
+
   .login-form .input-group {
     .form-control {
-      height: 33px;
+      height: 40px;
+      font-size: $text-size-max480Height750 !important;
     }
   }
+
   .forgot, .front p {
-    font-size: $text-size-max480;
+    font-size: $text-size-max480Height750 !important;
   }
 
   .checkbox input {
@@ -37,33 +40,28 @@ h1 {
     @include size(15px, 15px);
   }
 
-  .select-month, .select-day, .select-year {
-    button {
+  .checkbox + label {
+    padding: 2px 0 0 30px !important;
+    font-size: $text-size-max480Height750 !important;
+  }
+
+  .select-month,.select-day, .select-year{
+    button{
       padding: 5px 5px 5px 3px !important;
-      span {
+      span{
         font-size: $text-size-max335;
         padding-top: 3px;
       }
     }
   }
 
-  .select-gender {
-    .error {
-      margin-right: -17%;
-    }
-  }
-
-  .checkbox + label {
-    padding: 3px 0 0 30px !important;
-    font-size: $text-size-max480;
-  }
-
   .sign-btn {
     a:hover {
+      font-size: $text-size-max480Height750 !important;
       color: $silver;
     }
     input.btn {
-      height: 32px;
+      height: 40px;
       padding-top: 3px;
     }
     .sign-up {
@@ -74,5 +72,5 @@ h1 {
 
 .copy-right-text {
   text-align: center !important;
-  font-size: $text-size-max480;
+  font-size: $text-size-max480Height750 !important;
 }

@@ -1,67 +1,86 @@
-.login-center {
-  margin: 0 30px;
-  top: 22%;
+.login-screen {
+  .login-center {
+    margin: 0 30px;
+    top: 22%;
+  }
 }
 
-.register-center {
-  margin: 0 30px;
-  top: 5%;
-}
-
-.login {
-  width: 100%;
+.register-screen {
+  height: 102%;
+  .register-center {
+    margin: 0 30px;
+    top: 5%;
+  }
 }
 
 h1 {
   font-size: 32px;
 }
 
-.login .forgot, .front p {
-  font-size: $text-size-max480;
-}
-
-.login .checkbox label span {
-  margin-left: 5px;
-  font-size: $text-size-max480;
-}
-
-.login .checkbox input {
-  margin-top: 5px;
-  @include size(15px, 15px);
-}
-
-.login .sign-btn a:hover {
-  font-size: $text-size-max480;
-  &:hover {
-    color: $silver;
-  }
-}
-
-.login-form .input-group {
-  .form-control {
-    height: 33px;
-    font-size: $text-size-max480;
-  }
-}
-
-.login .sign-btn input.btn {
-  height: 32px;
-  padding-top: 3px;
-}
-
-.sign-up {
-  margin-top: 10px;
-}
-
 .minus-padding {
   padding: 0;
 }
 
-.copy-right-text {
-  text-align: center !important;
+.login {
+  width: 100%;
   font-size: $text-size-max480;
+
+  .forgot, .front p {
+    font-size: $text-size-max480;
+  }
+
+  .checkbox input {
+    margin-top: 5px;
+    @include size(15px, 15px);
+  }
+
+  .checkbox + label {
+    padding: 2px 0 0 30px !important;
+    font-size: $text-size-max480Height750 !important;
+  }
+
+  .select-month, .select-day, .select-year {
+    button {
+      padding: 5px 5px 5px 3px !important;
+      span {
+        font-size: $text-size-max335;
+        padding-top: 3px;
+      }
+    }
+  }
+
+  .select-gender {
+    .error {
+      margin-right: -23%;
+    }
+    button {
+      span {
+        font-size: $text-size-max480;
+      }
+    }
+  }
+
+  .sign-btn {
+    a:hover {
+      color: $silver;
+    }
+    input.btn {
+      height: 34px;
+      padding-top: 3px;
+    }
+    .sign-up {
+      margin-top: 10px;
+    }
+  }
 }
 
-.login {
-  font-size: $text-size-max480;
+.copy-right-text {
+  text-align: center !important;
+  font-size: $text-size-max480Height750 !important;
+}
+
+.input-relative {
+  .form-control {
+    font-size: $text-size-max480;
+  }
 }

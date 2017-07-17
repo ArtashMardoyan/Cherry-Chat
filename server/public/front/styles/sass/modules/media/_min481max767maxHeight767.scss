@@ -21,3 +21,20 @@
 .login .sign-btn a:hover {
     color: $silver;
 }
+
+.select-gender {
+  .error {
+    margin-right: -13%;
+  }
+  button {
+    span {
+      font-size: $text-size-max480;
+    }
+  }
+}
+
+.input-relative {
+  .form-control {
+    font-size: $text-size-max480;
+  }
+}
