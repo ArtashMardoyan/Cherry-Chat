@@ -20,7 +20,7 @@ h1 {
   height: 100%;
 }
 
-.register-screen {
+.register-screen, .profile-screen {
   @extend .login-screen
 }
 
@@ -34,7 +34,7 @@ h1 {
   top: 0;
 }
 
-.register-screen:before {
+.register-screen:before, .profile-screen:before {
   @extend .login-screen:before
 }
 
@@ -44,6 +44,11 @@ h1 {
 }
 
 .register-center {
+  position: absolute;
+  top: 20%;
+}
+
+.profile-center{
   position: absolute;
   top: 20%;
 }
@@ -161,6 +166,9 @@ h1 {
 }
 
 .input-relative {
+  .col-xs-3 {
+    min-height: 0;
+  }
   margin-bottom: 30px;
   position: relative;
   width: 100%;
@@ -174,7 +182,7 @@ h1 {
   right: 0;
 }
 
-.error-date{
+.error-date {
   font-size: $error !important;
   color: #ef302d !important;
 }
@@ -242,20 +250,10 @@ select option:first-child {
   padding: 0;
   .btn-group {
     width: 100% !important;
-  }
-  button {
-    border: 2px solid $cherry;
-    background-color: transparent;
-    color: $silver;
-    &:hover {
-      @extend button
-    }
-    &:focus {
-      @extend button;
-      border: 2px solid $darkCherry;
-    }
-    &:active {
-      @extend button
+    button {
+      border: 2px solid $cherry !important;
+      background-color: transparent !important;
+      color: $silver !important;
     }
   }
   .dropdown-menu {
@@ -266,33 +264,70 @@ select option:first-child {
 }
 
 .select-year {
-  button {
-    border-radius: 8px 0 0 8px !important;
-    padding: 6px 6px 6px 3px;
-    span {
-      font-size: $text-size-max480;
+  .btn-group {
+    button {
+      border-radius: 8px 0 0 8px !important;
+      padding: 6px 6px 6px 3px;
+      &:hover {
+        @extend button
+      }
+      &:focus {
+        @extend button;
+        border: 2px solid $darkCherry !important;
+      }
+      &:active {
+        @extend button
+      }
+      span {
+        font-size: $text-size-max480;
+      }
     }
   }
 }
 
 .select-month {
-  button {
-    border-right: none !important;
-    border-left: none !important;
-    padding: 6px 6px 6px 3px;
-    border-radius: 0;
-    span {
-      font-size: $text-size-max480;
+  .btn-group {
+    button {
+      border-right: none !important;
+      border-left: none !important;
+      padding: 6px 6px 6px 3px;
+      border-radius: 0;
+      &:hover {
+        @extend button
+      }
+      &:focus {
+        border: 2px solid $darkCherry !important;
+        border-right: none !important;
+        border-left: none !important;
+      }
+      &:active {
+        @extend button
+      }
+      span {
+        font-size: $text-size-max480;
+      }
     }
   }
 }
 
 .select-day {
-  button {
-    border-radius: 0 8px 8px 0 !important;
-    padding: 6px 6px 6px 3px;
-    span {
-      font-size: $text-size-max480;
+  .btn-group {
+    button {
+      border-radius: 0 8px 8px 0 !important;
+      padding: 6px 6px 6px 3px;
+      &:hover {
+        @extend button
+      }
+      &:focus {
+        @extend button;
+        border: 2px solid $darkCherry !important;
+      }
+      &:active {
+        @extend button
+      }
+      span {
+        font-size: $text-size-max480;
+      }
     }
   }
 }
@@ -303,23 +338,24 @@ select option:first-child {
   }
   .btn-group {
     width: 100%;
-  }
-  button {
-    border: 2px solid $cherry;
-    background-color: transparent;
-    color: $silver;
-    &:hover {
-      @extend button
-    }
-    &:focus {
-      border: 2px solid $darkCherry;
-      @extend button;
-    }
-    &:active {
-      @extend button
-    }
-    span {
-      font-size: $text-size-max480;
+    button {
+      border: 2px solid $cherry !important;
+      background-color: transparent !important;
+      color: $silver !important;
+      border-radius: 8px 0 0 8px;
+      &:hover {
+        @extend button
+      }
+      &:focus {
+        border: 2px solid $darkCherry;
+        @extend button;
+      }
+      &:active {
+        @extend button
+      }
+      span {
+        font-size: $text-size-max480;
+      }
     }
   }
   .dropdown-menu {

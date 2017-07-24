@@ -2,6 +2,7 @@
 
 (function ($) {
     const loginForm = $('#loginForm');
+    const changePassword = $('#changePasswordForm');
 
     const validate = {
         rules: {
@@ -27,17 +28,47 @@
                 checkGender: true
             },
             day: {
-                checkDate: true,
+                checkDate: true
+            }
+        },
+        message: {
+            rePassword: {
+                equalTo: 'Please enter the same value.'
             }
         },
         errorPlacement: function (err, elem) {
             if (elem.attr('name') === 'day') {
                 err.appendTo('.error-date')
-            }else{
+            } else {
                 err.insertAfter(elem)
             }
+        },
+        submitHandler: function () {
+            $('#myModal').modal('hide');
         }
     };
+
+    const changePasswordValidate = {
+        rules: {
+            currentPassword: {
+                rightPassword: true
+            },
+            password: {
+                checkPassword: true,
+                required: true,
+                minlength: 6
+            },
+            rePassword: {
+                equalTo: '#password',
+                required: true
+            }
+        },
+        messages: {
+            rePassword: {
+                equalTo: 'Please enter the same value.'
+            }
+        }
+    }
 
     $.validator.addMethod('fullName', function (value) {
         return /^[a-z,'-._]+((\s)[a-z,'-._]+((\s)[a-z,'-._]+)?)?$/i.test(value);
@@ -59,7 +90,11 @@
         return value !== '0';
     }, 'Please choose day of birth');
 
+    $.validator.addMethod('rightPassword', function (value) {
+        return $('#currentPassword').val() === 'chemmorana666';
+    }, 'Please enter a right password');
 
     loginForm.validate(Object.assign(validate));
+    changePassword.validate(Object.assign(changePasswordValidate));
 
 }(jQuery));

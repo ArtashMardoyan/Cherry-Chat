@@ -5,7 +5,7 @@
   font-weight: normal;
   font-style: normal;
 }
-html, body, main, .login-screen, .register-screen {
+html, body, main, .login-screen, .register-screen, .profile-screen {
   width: 100%;
   height: 100%;
 }
@@ -21,14 +21,14 @@ h1 {
   color: #731121;
 }
 
-.login-screen, .register-screen {
+.login-screen, .register-screen, .profile-screen {
   position: relative;
   background: url(../../img/background/cherry.jpg) center fixed;
   background-size: cover;
   height: 100%;
 }
 
-.login-screen:before, .register-screen:before {
+.login-screen:before, .register-screen:before, .profile-screen:before {
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
   height: 100%;
@@ -44,6 +44,11 @@ h1 {
 }
 
 .register-center {
+  position: absolute;
+  top: 20%;
+}
+
+.profile-center {
   position: absolute;
   top: 20%;
 }
@@ -172,6 +177,9 @@ h1 {
   position: relative;
   width: 100%;
 }
+.input-relative .col-xs-3 {
+  min-height: 0;
+}
 
 .error {
   font-size: 12px !important;
@@ -251,41 +259,49 @@ select option:first-child {
 .select-date .btn-group {
   width: 100% !important;
 }
-.select-date button, .select-date button:hover, .select-date button:focus, .select-date button:active {
-  border: 2px solid #731121;
-  background-color: transparent;
-  color: #d0caca;
-}
-.select-date button:focus {
-  border: 2px solid #50131d;
+.select-date .btn-group button, .select-date .select-year .btn-group button:hover, .select-year .select-date .btn-group button:hover, .select-date .select-year .btn-group button:focus, .select-year .select-date .btn-group button:focus, .select-date .select-year .btn-group button:active, .select-year .select-date .btn-group button:active, .select-date .select-month .btn-group button:hover, .select-month .select-date .btn-group button:hover, .select-date .select-month .btn-group button:active, .select-month .select-date .btn-group button:active, .select-date .select-day .btn-group button:hover, .select-day .select-date .btn-group button:hover, .select-date .select-day .btn-group button:focus, .select-day .select-date .btn-group button:focus, .select-date .select-day .btn-group button:active, .select-day .select-date .btn-group button:active, .select-date .select-gender .btn-group button:hover, .select-gender .select-date .btn-group button:hover, .select-date .select-gender .btn-group button:focus, .select-gender .select-date .btn-group button:focus, .select-date .select-gender .btn-group button:active, .select-gender .select-date .btn-group button:active {
+  border: 2px solid #731121 !important;
+  background-color: transparent !important;
+  color: #d0caca !important;
 }
 .select-date .dropdown-menu ul > :first-child {
   display: none;
 }
 
-.select-year button, .select-year .select-date button:hover, .select-date .select-year button:hover, .select-year .select-date button:focus, .select-date .select-year button:focus, .select-year .select-date button:active, .select-date .select-year button:active, .select-year .select-gender button:hover, .select-gender .select-year button:hover, .select-year .select-gender button:focus, .select-gender .select-year button:focus, .select-year .select-gender button:active, .select-gender .select-year button:active {
+.select-year .btn-group button, .select-year .btn-group button:hover, .select-year .btn-group button:focus, .select-year .btn-group button:active {
   border-radius: 8px 0 0 8px !important;
   padding: 6px 6px 6px 3px;
 }
-.select-year button span, .select-year .select-date button:hover span, .select-date .select-year button:hover span, .select-year .select-date button:focus span, .select-date .select-year button:focus span, .select-year .select-date button:active span, .select-date .select-year button:active span, .select-year .select-gender button:hover span, .select-gender .select-year button:hover span, .select-year .select-gender button:focus span, .select-gender .select-year button:focus span, .select-year .select-gender button:active span, .select-gender .select-year button:active span {
+.select-year .btn-group button:focus {
+  border: 2px solid #50131d !important;
+}
+.select-year .btn-group button span, .select-year .btn-group button:hover span, .select-year .btn-group button:focus span, .select-year .btn-group button:active span {
   font-size: 12px;
 }
 
-.select-month button, .select-month .select-date button:hover, .select-date .select-month button:hover, .select-month .select-date button:focus, .select-date .select-month button:focus, .select-month .select-date button:active, .select-date .select-month button:active, .select-month .select-gender button:hover, .select-gender .select-month button:hover, .select-month .select-gender button:focus, .select-gender .select-month button:focus, .select-month .select-gender button:active, .select-gender .select-month button:active {
+.select-month .btn-group button, .select-month .select-year .btn-group button:focus, .select-year .select-month .btn-group button:focus, .select-month .btn-group button:hover, .select-month .btn-group button:active, .select-month .select-day .btn-group button:focus, .select-day .select-month .btn-group button:focus, .select-month .select-gender .btn-group button:focus, .select-gender .select-month .btn-group button:focus {
   border-right: none !important;
   border-left: none !important;
   padding: 6px 6px 6px 3px;
   border-radius: 0;
 }
-.select-month button span, .select-month .select-date button:hover span, .select-date .select-month button:hover span, .select-month .select-date button:focus span, .select-date .select-month button:focus span, .select-month .select-date button:active span, .select-date .select-month button:active span, .select-month .select-gender button:hover span, .select-gender .select-month button:hover span, .select-month .select-gender button:focus span, .select-gender .select-month button:focus span, .select-month .select-gender button:active span, .select-gender .select-month button:active span {
+.select-month .btn-group button:focus {
+  border: 2px solid #50131d !important;
+  border-right: none !important;
+  border-left: none !important;
+}
+.select-month .btn-group button span, .select-month .select-year .btn-group button:focus span, .select-year .select-month .btn-group button:focus span, .select-month .btn-group button:hover span, .select-month .btn-group button:active span, .select-month .select-day .btn-group button:focus span, .select-day .select-month .btn-group button:focus span, .select-month .select-gender .btn-group button:focus span, .select-gender .select-month .btn-group button:focus span {
   font-size: 12px;
 }
 
-.select-day button, .select-day .select-date button:hover, .select-date .select-day button:hover, .select-day .select-date button:focus, .select-date .select-day button:focus, .select-day .select-date button:active, .select-date .select-day button:active, .select-day .select-gender button:hover, .select-gender .select-day button:hover, .select-day .select-gender button:focus, .select-gender .select-day button:focus, .select-day .select-gender button:active, .select-gender .select-day button:active {
+.select-day .btn-group button, .select-day .btn-group button:hover, .select-day .btn-group button:focus, .select-day .btn-group button:active {
   border-radius: 0 8px 8px 0 !important;
   padding: 6px 6px 6px 3px;
 }
-.select-day button span, .select-day .select-date button:hover span, .select-date .select-day button:hover span, .select-day .select-date button:focus span, .select-date .select-day button:focus span, .select-day .select-date button:active span, .select-date .select-day button:active span, .select-day .select-gender button:hover span, .select-gender .select-day button:hover span, .select-day .select-gender button:focus span, .select-gender .select-day button:focus span, .select-day .select-gender button:active span, .select-gender .select-day button:active span {
+.select-day .btn-group button:focus {
+  border: 2px solid #50131d !important;
+}
+.select-day .btn-group button span, .select-day .btn-group button:hover span, .select-day .btn-group button:focus span, .select-day .btn-group button:active span {
   font-size: 12px;
 }
 
@@ -295,15 +311,16 @@ select option:first-child {
 .select-gender .btn-group {
   width: 100%;
 }
-.select-gender button, .select-gender button:hover, .select-gender button:focus, .select-gender button:active {
-  border: 2px solid #731121;
-  background-color: transparent;
-  color: #d0caca;
+.select-gender .btn-group button, .select-gender .btn-group button:hover, .select-gender .btn-group button:focus, .select-gender .btn-group button:active {
+  border: 2px solid #731121 !important;
+  background-color: transparent !important;
+  color: #d0caca !important;
+  border-radius: 8px 0 0 8px;
 }
-.select-gender button:focus {
+.select-gender .btn-group button:focus {
   border: 2px solid #50131d;
 }
-.select-gender button span, .select-gender button:hover span, .select-gender button:focus span, .select-gender button:active span {
+.select-gender .btn-group button span, .select-gender .btn-group button:hover span, .select-gender .btn-group button:focus span, .select-gender .btn-group button:active span {
   font-size: 12px;
 }
 .select-gender .dropdown-menu ul > :first-child {
@@ -311,6 +328,123 @@ select option:first-child {
 }
 
 .bootstrap-select .dropdown-toggle:focus {
+  outline: none !important;
+}
+
+.avatar {
+  border: 2px solid #731121;
+  border-radius: 50%;
+  margin-top: -55%;
+  height: 110px;
+  width: 110px;
+}
+
+.description-data {
+  text-align: center;
+  color: #d0caca;
+}
+
+.select-wrapper {
+  background: url("../../img/icon/camera-icon.ico") no-repeat;
+  margin: -10px auto 10px auto;
+  background-size: cover;
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+.select-wrapper:hover {
+  cursor: pointer;
+}
+.select-wrapper .imageSrc {
+  width: 25px;
+  height: 25px;
+  margin-right: 100px;
+  opacity: 0;
+}
+
+.profile-data .profile-data-name {
+  text-align: right;
+  line-height: 32px;
+  color: #d0caca;
+}
+.profile-data .input-group {
+  margin-bottom: 20px;
+}
+.profile-data .input-group .profile-data-value {
+  background-color: transparent !important;
+  border-radius: 8px 0 0 8px;
+  border: 2px solid #731121;
+  color: #d0caca;
+}
+.profile-data .input-group .profile-data-value:disabled {
+  cursor: default;
+}
+.profile-data .input-group .profile-data-value-addon {
+  background-color: transparent;
+  border: 2px solid #731121;
+  border-radius: 0 8px 8px 0;
+  border-left: 0;
+}
+
+.div-profile-btn {
+  padding: 0 25px !important;
+}
+.div-profile-btn .profile-btn {
+  transition: all 0.2s ease-out;
+  border: 2px solid #50131d;
+  margin-top: 10px;
+  background-color: #731121;
+  outline: none !important;
+  border-radius: 8px;
+  line-height: 15px;
+  color: #d0caca;
+}
+.div-profile-btn .profile-btn:hover {
+  background-color: #50131d;
+}
+
+.div-change-password {
+  text-align: center;
+}
+.div-change-password .change-password {
+  color: #d0caca;
+  cursor: pointer;
+}
+
+.div-change-password2 .modal-dialog .modal-content {
+  margin: 22% 13%;
+  border-radius: 15px;
+  border: 2px solid #50131d !important;
+  background-color: #731121 !important;
+}
+.div-change-password2 .modal-dialog .modal-content .title-modal {
+  text-align: center;
+  padding: 15px;
+  color: #d0caca;
+}
+.div-change-password2 .modal-dialog .modal-content .body-modal {
+  height: 150px;
+  padding: 15px;
+}
+.div-change-password2 .modal-dialog .modal-content .body-modal .edit-password {
+  border: 2px solid #d0caca;
+  border-radius: 8px;
+}
+.div-change-password2 .modal-dialog .modal-content .body-modal .edit-password::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+.div-change-password2 .modal-dialog .modal-content .body-modal .edit-password:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+.div-change-password2 .modal-dialog .modal-content .body-modal .edit-password::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+.div-change-password2 .modal-dialog .modal-content .footer-modal {
+  padding: 15px;
+  text-align: right;
+}
+.div-change-password2 .modal-dialog .modal-content .footer-modal button {
   outline: none !important;
 }
 
@@ -328,7 +462,7 @@ footer .copy-right-text .copy-right {
 }
 
 @media (max-width: 335px) {
-  .login-screen .login-center, .register-screen .login-center {
+  .login-screen .login-center, .register-screen .login-center, .profile-screen .login-center {
     padding: 0 20px;
     top: 20%;
   }
@@ -363,11 +497,11 @@ footer .copy-right-text .copy-right {
     width: 15px;
     height: 15px;
   }
-  .login .select-month button, .login .select-day button, .login .select-year button {
+  .login .select-month button, .select-year .btn-group .login .select-month button:hover, .login .select-month .select-year .btn-group button:focus, .select-year .btn-group .login .select-month button:focus, .select-year .btn-group .login .select-month button:active, .login .select-month .btn-group button:hover, .login .select-month .btn-group button:active, .select-day .btn-group .login .select-month button:hover, .login .select-month .select-day .btn-group button:focus, .select-day .btn-group .login .select-month button:focus, .select-day .btn-group .login .select-month button:active, .select-gender .btn-group .login .select-month button:hover, .login .select-month .select-gender .btn-group button:focus, .select-gender .btn-group .login .select-month button:focus, .select-gender .btn-group .login .select-month button:active, .login .select-day button, .select-year .btn-group .login .select-day button:hover, .select-year .btn-group .login .select-day button:focus, .select-year .btn-group .login .select-day button:active, .select-month .btn-group .login .select-day button:hover, .select-month .btn-group .login .select-day button:active, .login .select-day .btn-group button:hover, .login .select-day .btn-group button:focus, .login .select-day .btn-group button:active, .select-gender .btn-group .login .select-day button:hover, .select-gender .btn-group .login .select-day button:focus, .select-gender .btn-group .login .select-day button:active, .login .select-year button, .login .select-year .btn-group button:hover, .login .select-year .btn-group button:focus, .login .select-year .btn-group button:active, .select-month .btn-group .login .select-year button:hover, .select-month .btn-group .login .select-year button:active, .select-day .btn-group .login .select-year button:hover, .select-day .btn-group .login .select-year button:focus, .select-day .btn-group .login .select-year button:active, .select-gender .btn-group .login .select-year button:hover, .select-gender .btn-group .login .select-year button:focus, .select-gender .btn-group .login .select-year button:active {
     padding: 5px 5px 5px 3px !important;
   }
-  .login .select-month button span, .login .select-day button span, .login .select-year button span {
-    font-size: 9px;
+  .login .select-month button span, .select-year .btn-group .login .select-month button:hover span, .login .select-month .select-year .btn-group button:focus span, .select-year .btn-group .login .select-month button:focus span, .select-year .btn-group .login .select-month button:active span, .login .select-month .btn-group button:hover span, .login .select-month .btn-group button:active span, .select-day .btn-group .login .select-month button:hover span, .login .select-month .select-day .btn-group button:focus span, .select-day .btn-group .login .select-month button:focus span, .select-day .btn-group .login .select-month button:active span, .select-gender .btn-group .login .select-month button:hover span, .login .select-month .select-gender .btn-group button:focus span, .select-gender .btn-group .login .select-month button:focus span, .select-gender .btn-group .login .select-month button:active span, .login .select-day button span, .select-year .btn-group .login .select-day button:hover span, .select-year .btn-group .login .select-day button:focus span, .select-year .btn-group .login .select-day button:active span, .select-month .btn-group .login .select-day button:hover span, .select-month .btn-group .login .select-day button:active span, .login .select-day .btn-group button:hover span, .login .select-day .btn-group button:focus span, .login .select-day .btn-group button:active span, .select-gender .btn-group .login .select-day button:hover span, .select-gender .btn-group .login .select-day button:focus span, .select-gender .btn-group .login .select-day button:active span, .login .select-year button span, .login .select-year .btn-group button:hover span, .login .select-year .btn-group button:focus span, .login .select-year .btn-group button:active span, .select-month .btn-group .login .select-year button:hover span, .select-month .btn-group .login .select-year button:active span, .select-day .btn-group .login .select-year button:hover span, .select-day .btn-group .login .select-year button:focus span, .select-day .btn-group .login .select-year button:active span, .select-gender .btn-group .login .select-year button:hover span, .select-gender .btn-group .login .select-year button:focus span, .select-gender .btn-group .login .select-year button:active span {
+    font-size: 10px;
     padding-top: 3px;
   }
   .login .select-gender .error {
@@ -392,9 +526,39 @@ footer .copy-right-text .copy-right {
     text-align: center !important;
     font-size: 12px;
   }
+
+  .profile-center {
+    top: 8%;
+  }
+  .profile-center .profile-data .profile-data-name {
+    text-align: left;
+    font-size: 12px;
+  }
+  .profile-center .profile-data .input-group {
+    margin-bottom: 10px;
+  }
+  .profile-center .profile-data .input-group .profile-data-value {
+    font-size: 12px;
+  }
+  .profile-center .div-icon {
+    padding: 0;
+  }
+  .profile-center .div-profile-btn {
+    padding: 0 !important;
+  }
+  .profile-center .div-profile-btn .profile-btn {
+    margin-top: 20px;
+  }
+  .profile-center .div-change-password {
+    text-align: center;
+  }
+
+  .modal-content .footer-modal {
+    text-align: center;
+  }
 }
 @media (min-width: 336px) and (max-width: 480px) {
-  .login-screen .login-center, .register-screen .login-center {
+  .login-screen .login-center, .register-screen .login-center, .profile-screen .login-center {
     margin: 0 30px;
     top: 22%;
   }
@@ -431,17 +595,17 @@ footer .copy-right-text .copy-right {
     padding: 2px 0 0 30px !important;
     font-size: 14px !important;
   }
-  .login .select-month button, .login .select-day button, .login .select-year button {
+  .login .select-month button, .select-year .btn-group .login .select-month button:hover, .login .select-month .select-year .btn-group button:focus, .select-year .btn-group .login .select-month button:focus, .select-year .btn-group .login .select-month button:active, .login .select-month .btn-group button:hover, .login .select-month .btn-group button:active, .select-day .btn-group .login .select-month button:hover, .login .select-month .select-day .btn-group button:focus, .select-day .btn-group .login .select-month button:focus, .select-day .btn-group .login .select-month button:active, .select-gender .btn-group .login .select-month button:hover, .login .select-month .select-gender .btn-group button:focus, .select-gender .btn-group .login .select-month button:focus, .select-gender .btn-group .login .select-month button:active, .login .select-day button, .select-year .btn-group .login .select-day button:hover, .select-year .btn-group .login .select-day button:focus, .select-year .btn-group .login .select-day button:active, .select-month .btn-group .login .select-day button:hover, .select-month .btn-group .login .select-day button:active, .login .select-day .btn-group button:hover, .login .select-day .btn-group button:focus, .login .select-day .btn-group button:active, .select-gender .btn-group .login .select-day button:hover, .select-gender .btn-group .login .select-day button:focus, .select-gender .btn-group .login .select-day button:active, .login .select-year button, .login .select-year .btn-group button:hover, .login .select-year .btn-group button:focus, .login .select-year .btn-group button:active, .select-month .btn-group .login .select-year button:hover, .select-month .btn-group .login .select-year button:active, .select-day .btn-group .login .select-year button:hover, .select-day .btn-group .login .select-year button:focus, .select-day .btn-group .login .select-year button:active, .select-gender .btn-group .login .select-year button:hover, .select-gender .btn-group .login .select-year button:focus, .select-gender .btn-group .login .select-year button:active {
     padding: 5px 5px 5px 3px !important;
   }
-  .login .select-month button span, .login .select-day button span, .login .select-year button span {
-    font-size: 9px;
+  .login .select-month button span, .select-year .btn-group .login .select-month button:hover span, .login .select-month .select-year .btn-group button:focus span, .select-year .btn-group .login .select-month button:focus span, .select-year .btn-group .login .select-month button:active span, .login .select-month .btn-group button:hover span, .login .select-month .btn-group button:active span, .select-day .btn-group .login .select-month button:hover span, .login .select-month .select-day .btn-group button:focus span, .select-day .btn-group .login .select-month button:focus span, .select-day .btn-group .login .select-month button:active span, .select-gender .btn-group .login .select-month button:hover span, .login .select-month .select-gender .btn-group button:focus span, .select-gender .btn-group .login .select-month button:focus span, .select-gender .btn-group .login .select-month button:active span, .login .select-day button span, .select-year .btn-group .login .select-day button:hover span, .select-year .btn-group .login .select-day button:focus span, .select-year .btn-group .login .select-day button:active span, .select-month .btn-group .login .select-day button:hover span, .select-month .btn-group .login .select-day button:active span, .login .select-day .btn-group button:hover span, .login .select-day .btn-group button:focus span, .login .select-day .btn-group button:active span, .select-gender .btn-group .login .select-day button:hover span, .select-gender .btn-group .login .select-day button:focus span, .select-gender .btn-group .login .select-day button:active span, .login .select-year button span, .login .select-year .btn-group button:hover span, .login .select-year .btn-group button:focus span, .login .select-year .btn-group button:active span, .select-month .btn-group .login .select-year button:hover span, .select-month .btn-group .login .select-year button:active span, .select-day .btn-group .login .select-year button:hover span, .select-day .btn-group .login .select-year button:focus span, .select-day .btn-group .login .select-year button:active span, .select-gender .btn-group .login .select-year button:hover span, .select-gender .btn-group .login .select-year button:focus span, .select-gender .btn-group .login .select-year button:active span {
+    font-size: 10px;
     padding-top: 3px;
   }
   .login .select-gender .error {
     margin-right: -23%;
   }
-  .login .select-gender button span {
+  .login .select-gender button span, .select-year .btn-group .login .select-gender button:hover span, .select-year .btn-group .login .select-gender button:focus span, .select-year .btn-group .login .select-gender button:active span, .select-month .btn-group .login .select-gender button:hover span, .select-month .btn-group .login .select-gender button:active span, .select-day .btn-group .login .select-gender button:hover span, .select-day .btn-group .login .select-gender button:focus span, .select-day .btn-group .login .select-gender button:active span, .login .select-gender .btn-group button:hover span, .login .select-gender .btn-group button:focus span, .login .select-gender .btn-group button:active span {
     font-size: 12px;
   }
   .login .sign-btn a:hover {
@@ -463,9 +627,40 @@ footer .copy-right-text .copy-right {
   .input-relative .form-control {
     font-size: 12px;
   }
+
+  .profile-screen .profile-center {
+    top: 10%;
+  }
+  .profile-screen .profile-center .div-profile-btn {
+    padding: 0 !important;
+  }
+  .profile-screen .profile-center .div-icon {
+    padding: 0;
+  }
+  .profile-screen .profile-center .select-wrapper {
+    width: 30px;
+    height: 30px;
+  }
+  .profile-screen .profile-center .select-wrapper .imageSrc {
+    width: 30px;
+    height: 30px;
+  }
+  .profile-screen .profile-center .div-change-password {
+    text-align: center;
+  }
+  .profile-screen .profile-center .div-change-password .change-password {
+    font-size: 12px;
+  }
+  .profile-screen .profile-center .profile-data .profile-data-name {
+    text-align: left;
+    font-size: 12px;
+  }
+  .profile-screen .profile-center .modal-content .footer-modal {
+    text-align: center;
+  }
 }
 @media (max-width: 480px) and (min-height: 750px) {
-  .login-screen .login-center, .register-screen .login-center {
+  .login-screen .login-center, .register-screen .login-center, .profile-screen .login-center {
     margin: 0 30px;
     top: 24%;
   }
@@ -503,11 +698,11 @@ footer .copy-right-text .copy-right {
     padding: 2px 0 0 30px !important;
     font-size: 14px !important;
   }
-  .login .select-month button, .login .select-day button, .login .select-year button {
+  .login .select-month button, .select-year .btn-group .login .select-month button:hover, .login .select-month .select-year .btn-group button:focus, .select-year .btn-group .login .select-month button:focus, .select-year .btn-group .login .select-month button:active, .login .select-month .btn-group button:hover, .login .select-month .btn-group button:active, .select-day .btn-group .login .select-month button:hover, .login .select-month .select-day .btn-group button:focus, .select-day .btn-group .login .select-month button:focus, .select-day .btn-group .login .select-month button:active, .select-gender .btn-group .login .select-month button:hover, .login .select-month .select-gender .btn-group button:focus, .select-gender .btn-group .login .select-month button:focus, .select-gender .btn-group .login .select-month button:active, .login .select-day button, .select-year .btn-group .login .select-day button:hover, .select-year .btn-group .login .select-day button:focus, .select-year .btn-group .login .select-day button:active, .select-month .btn-group .login .select-day button:hover, .select-month .btn-group .login .select-day button:active, .login .select-day .btn-group button:hover, .login .select-day .btn-group button:focus, .login .select-day .btn-group button:active, .select-gender .btn-group .login .select-day button:hover, .select-gender .btn-group .login .select-day button:focus, .select-gender .btn-group .login .select-day button:active, .login .select-year button, .login .select-year .btn-group button:hover, .login .select-year .btn-group button:focus, .login .select-year .btn-group button:active, .select-month .btn-group .login .select-year button:hover, .select-month .btn-group .login .select-year button:active, .select-day .btn-group .login .select-year button:hover, .select-day .btn-group .login .select-year button:focus, .select-day .btn-group .login .select-year button:active, .select-gender .btn-group .login .select-year button:hover, .select-gender .btn-group .login .select-year button:focus, .select-gender .btn-group .login .select-year button:active {
     padding: 5px 5px 5px 3px !important;
   }
-  .login .select-month button span, .login .select-day button span, .login .select-year button span {
-    font-size: 9px;
+  .login .select-month button span, .select-year .btn-group .login .select-month button:hover span, .login .select-month .select-year .btn-group button:focus span, .select-year .btn-group .login .select-month button:focus span, .select-year .btn-group .login .select-month button:active span, .login .select-month .btn-group button:hover span, .login .select-month .btn-group button:active span, .select-day .btn-group .login .select-month button:hover span, .login .select-month .select-day .btn-group button:focus span, .select-day .btn-group .login .select-month button:focus span, .select-day .btn-group .login .select-month button:active span, .select-gender .btn-group .login .select-month button:hover span, .login .select-month .select-gender .btn-group button:focus span, .select-gender .btn-group .login .select-month button:focus span, .select-gender .btn-group .login .select-month button:active span, .login .select-day button span, .select-year .btn-group .login .select-day button:hover span, .select-year .btn-group .login .select-day button:focus span, .select-year .btn-group .login .select-day button:active span, .select-month .btn-group .login .select-day button:hover span, .select-month .btn-group .login .select-day button:active span, .login .select-day .btn-group button:hover span, .login .select-day .btn-group button:focus span, .login .select-day .btn-group button:active span, .select-gender .btn-group .login .select-day button:hover span, .select-gender .btn-group .login .select-day button:focus span, .select-gender .btn-group .login .select-day button:active span, .login .select-year button span, .login .select-year .btn-group button:hover span, .login .select-year .btn-group button:focus span, .login .select-year .btn-group button:active span, .select-month .btn-group .login .select-year button:hover span, .select-month .btn-group .login .select-year button:active span, .select-day .btn-group .login .select-year button:hover span, .select-day .btn-group .login .select-year button:focus span, .select-day .btn-group .login .select-year button:active span, .select-gender .btn-group .login .select-year button:hover span, .select-gender .btn-group .login .select-year button:focus span, .select-gender .btn-group .login .select-year button:active span {
+    font-size: 10px;
     padding-top: 3px;
   }
   .login .sign-btn a:hover {
@@ -527,11 +722,11 @@ footer .copy-right-text .copy-right {
     font-size: 14px !important;
   }
 }
-@media (min-width: 480px) and (max-width: 767px) and (max-height: 767px) {
-  .login-screen, .register-screen {
+@media (min-width: 480px) and (max-width: 767px) and (max-height: 710px) {
+  .login-screen, .register-screen, .profile-screen {
     height: 145%;
   }
-  .login-screen .login-center, .register-screen .login-center {
+  .login-screen .login-center, .register-screen .login-center, .profile-screen .login-center {
     top: 10%;
     margin: 0 50px;
   }
@@ -555,15 +750,51 @@ footer .copy-right-text .copy-right {
   .select-gender .error {
     margin-right: -13%;
   }
-  .select-gender button span, .select-gender button:hover span, .select-gender button:focus span, .select-gender button:active span {
+  .select-gender button span, .select-year .btn-group .select-gender button:hover span, .select-year .btn-group .select-gender button:focus span, .select-year .btn-group .select-gender button:active span, .select-month .btn-group .select-gender button:hover span, .select-month .btn-group .select-gender button:active span, .select-day .btn-group .select-gender button:hover span, .select-day .btn-group .select-gender button:focus span, .select-day .btn-group .select-gender button:active span, .select-gender .btn-group button:hover span, .select-gender .btn-group button:focus span, .select-gender .btn-group button:active span {
     font-size: 12px;
   }
 
   .input-relative .form-control {
     font-size: 12px;
   }
+
+  .profile-screen {
+    height: 215%;
+  }
+  .profile-screen .profile-center {
+    top: 15%;
+  }
+  .profile-screen .profile-center .avatar {
+    width: 80%;
+    height: 80%;
+    margin: -50% auto 0 auto;
+  }
+  .profile-screen .profile-center .select-wrapper {
+    width: 35px;
+    height: 35px;
+  }
+  .profile-screen .profile-center .select-wrapper .imageSrc {
+    width: 35px;
+    height: 35px;
+  }
+  .profile-screen .profile-center .profile-data .profile-data-name {
+    text-align: left;
+  }
+  .profile-screen .profile-center .profile-data button, .profile-screen .profile-center .profile-data input {
+    height: 40px;
+  }
+  .profile-screen .profile-center .div-profile-btn .profile-btn {
+    height: 40px;
+    width: 100%;
+  }
+  .profile-screen .profile-center .modal-content {
+    margin: 22% 20%;
+  }
+  .profile-screen .profile-center .modal-content .input-contain {
+    padding: 0 23%;
+  }
 }
-@media (min-width: 480px) and (max-width: 767px) and (min-height: 767px) {
+@media (min-width: 480px) and (max-width: 767px) and (min-height: 711px) {
   .login-center {
     top: 25%;
     margin: 0 50px;
@@ -578,6 +809,36 @@ footer .copy-right-text .copy-right {
     text-align: center !important;
     font-size: 12px;
   }
+
+  .profile-screen {
+    height: 115%;
+  }
+  .profile-screen .profile-center {
+    top: 15%;
+  }
+  .profile-screen .profile-center button, .profile-screen .profile-center .select-year .btn-group button:hover, .select-year .btn-group .profile-screen .profile-center button:hover, .profile-screen .profile-center .select-year .btn-group button:focus, .select-year .btn-group .profile-screen .profile-center button:focus, .profile-screen .profile-center .select-year .btn-group button:active, .select-year .btn-group .profile-screen .profile-center button:active, .profile-screen .profile-center .select-month .btn-group button:hover, .select-month .btn-group .profile-screen .profile-center button:hover, .profile-screen .profile-center .select-month .btn-group button:active, .select-month .btn-group .profile-screen .profile-center button:active, .profile-screen .profile-center .select-day .btn-group button:hover, .select-day .btn-group .profile-screen .profile-center button:hover, .profile-screen .profile-center .select-day .btn-group button:focus, .select-day .btn-group .profile-screen .profile-center button:focus, .profile-screen .profile-center .select-day .btn-group button:active, .select-day .btn-group .profile-screen .profile-center button:active, .profile-screen .profile-center .select-gender .btn-group button:hover, .select-gender .btn-group .profile-screen .profile-center button:hover, .profile-screen .profile-center .select-gender .btn-group button:focus, .select-gender .btn-group .profile-screen .profile-center button:focus, .profile-screen .profile-center .select-gender .btn-group button:active, .select-gender .btn-group .profile-screen .profile-center button:active, .profile-screen .profile-center input {
+    height: 40px;
+  }
+  .profile-screen .profile-center .select-wrapper {
+    width: 35px;
+    height: 35px;
+  }
+  .profile-screen .profile-center .select-wrapper .imageSrc {
+    width: 35px;
+    height: 35px;
+  }
+  .profile-screen .profile-center .profile-data .profile-data-name {
+    text-align: left;
+  }
+  .profile-screen .profile-center .change-password {
+    text-align: center;
+  }
+  .profile-screen .profile-center .modal-content {
+    margin: 22% 20%;
+  }
+  .profile-screen .profile-center .modal-content .input-contain {
+    padding: 0 23%;
+  }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .login-center {
@@ -597,6 +858,36 @@ footer .copy-right-text .copy-right {
   .select-gender .error {
     margin-right: -21%;
   }
+
+  .profile-screen {
+    height: 120%;
+  }
+  .profile-screen .profile-center {
+    top: 15%;
+  }
+  .profile-screen .profile-center .select-wrapper {
+    width: 35px;
+    height: 35px;
+  }
+  .profile-screen .profile-center .select-wrapper .imageSrc {
+    width: 35px;
+    height: 35px;
+  }
+  .profile-screen .profile-center .div-icon {
+    padding: 0;
+  }
+  .profile-screen .profile-center .profile-data .profile-data-name {
+    text-align: left;
+  }
+  .profile-screen .profile-center .profile-data button, .profile-screen .profile-center .profile-data input {
+    height: 35px;
+  }
+  .profile-screen .profile-center .profile-data .profile-data-name {
+    text-align: left;
+  }
+  .profile-screen .profile-center .div-profile-btn .profile-btn {
+    height: 35px;
+  }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .login-center {
@@ -615,6 +906,36 @@ footer .copy-right-text .copy-right {
 
   .select-gender .error {
     margin-right: -21%;
+  }
+
+  .profile-screen {
+    height: 120%;
+  }
+  .profile-screen .profile-center {
+    top: 15%;
+  }
+  .profile-screen .profile-center .select-wrapper {
+    width: 35px;
+    height: 35px;
+  }
+  .profile-screen .profile-center .select-wrapper .imageSrc {
+    width: 35px;
+    height: 35px;
+  }
+  .profile-screen .profile-center .div-icon {
+    padding: 0;
+  }
+  .profile-screen .profile-center .profile-data .profile-data-name {
+    text-align: left;
+  }
+  .profile-screen .profile-center .profile-data button, .profile-screen .profile-center .profile-data input {
+    height: 35px;
+  }
+  .profile-screen .profile-center .profile-data .profile-data-name {
+    text-align: left;
+  }
+  .profile-screen .profile-center .div-profile-btn .profile-btn {
+    height: 35px;
   }
 }
 @media (min-width: 993px) and (max-width: 1100px) {
@@ -625,9 +946,21 @@ footer .copy-right-text .copy-right {
   .register-center {
     top: 15%;
   }
+
+  .profile-center .div-profile-btn {
+    padding: 0 50px !important;
+  }
+  .profile-center .select-wrapper {
+    width: 30px;
+    height: 30px;
+  }
+  .profile-center .select-wrapper .imageSrc {
+    width: 30px;
+    height: 30px;
+  }
 }
 @media (min-width: 1100px) {
-  .login-center {
+  .login-center, .profile-center {
     width: 100%;
   }
 }

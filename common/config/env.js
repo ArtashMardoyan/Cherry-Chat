@@ -3,4 +3,6 @@ try {
     module.exports = Object.assign(require('./prod'), devConfig);
 } catch (e) {
     module.exports = require('./prod');
+}finally {
+
 }

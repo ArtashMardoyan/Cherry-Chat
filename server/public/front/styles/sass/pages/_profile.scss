@@ -1,0 +1,118 @@
+.avatar {
+  border: 2px solid #731121;
+  border-radius: 50%;
+  margin-top: -55%;
+  height: 110px;
+  width: 110px;
+}
+
+.description-data {
+  text-align: center;
+  color: $silver;
+}
+
+.select-wrapper {
+  background: url("../../img/icon/camera-icon.ico") no-repeat;
+  margin: -10px auto 10px auto;
+  background-size: cover;
+  display: block;
+  width: 25px;
+  height: 25px;
+  &:hover {
+    cursor: pointer;
+  }
+  .imageSrc {
+    width: 25px;
+    height: 25px;
+    margin-right: 100px;
+    opacity: 0;
+  }
+}
+
+.profile-data {
+  .profile-data-name {
+    text-align: right;
+    line-height: 32px;
+    color: $silver;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+    .profile-data-value {
+      background-color: $tranparent !important;
+      border-radius: 8px 0 0 8px;
+      border: 2px solid $cherry;
+      color: $silver;
+      &:disabled {
+        cursor: default;
+      }
+    }
+
+    .profile-data-value-addon {
+      background-color: transparent;
+      border: 2px solid $cherry;
+      border-radius: 0 8px 8px 0;
+      border-left: 0;
+    }
+  }
+}
+
+.div-profile-btn {
+  padding: 0 25px !important;
+  .profile-btn {
+    transition: all 0.2s ease-out;
+    border: 2px solid $darkCherry;
+    margin-top: 10px;
+    background-color: $cherry;
+    outline: none !important;
+    border-radius: 8px;
+    line-height: 15px;
+    color: $silver;
+    &:hover {
+      background-color: $darkCherry;
+    }
+  }
+}
+
+.div-change-password{
+  text-align: center;
+  .change-password{
+    color: $silver;
+    cursor: pointer;
+  }
+}
+
+.div-change-password2{
+  .modal-dialog{
+    .modal-content{
+      margin: 22% 13%;
+      border-radius: 15px;
+      border: 2px solid $darkCherry !important;
+      background-color: $cherry !important;
+      .title-modal{
+        text-align: center;
+        padding: 15px;
+        color: $silver;
+      }
+      .body-modal{
+        height: 150px;
+        padding: 15px;
+        .edit-password{
+          @include placeholder($placeholder-color);
+          border: 2px solid $silver;
+          border-radius: 8px;
+        }
+      }
+      .footer-modal{
+        padding: 15px;
+        text-align: right;
+        button{
+          outline: none !important;
+        }
+      }
+    }
+  }
+}
+
+
+

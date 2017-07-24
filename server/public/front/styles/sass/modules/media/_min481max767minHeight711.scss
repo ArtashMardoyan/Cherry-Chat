@@ -14,8 +14,33 @@
 }
 
 .profile-screen{
-  height: 110%;
+  height: 115%;
   .profile-center{
     top: 15%;
+    button, input{
+      height: 40px;
+    }
+    .select-wrapper{
+      width: 35px;
+      height: 35px;
+      .imageSrc {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    .profile-data {
+      .profile-data-name {
+        text-align: left;
+      }
+    }
+    .change-password{
+      text-align: center;
+    }
+    .modal-content{
+      margin: 22% 20%;
+      .input-contain{
+        padding: 0 23%;
+      }
+    }
   }
 }

@@ -84,3 +84,40 @@ h1 {
     font-size: $text-size-max480;
   }
 }
+
+.profile-screen {
+  .profile-center {
+    top: 10%;
+    .div-profile-btn {
+      padding: 0 !important;
+    }
+    .div-icon {
+      padding: 0;
+    }
+    .select-wrapper{
+      width: 30px;
+      height: 30px;
+      .imageSrc {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .div-change-password {
+      text-align: center;
+      .change-password {
+        font-size: $text-size-max480;
+      }
+    }
+    .profile-data {
+      .profile-data-name {
+        text-align: left;
+        font-size: $text-size-max480;
+      }
+    }
+    .modal-content {
+      .footer-modal {
+        text-align: center;
+      }
+    }
+  }
+}

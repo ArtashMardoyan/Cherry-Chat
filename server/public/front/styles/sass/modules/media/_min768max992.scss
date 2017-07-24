@@ -1,19 +1,60 @@
-.login-center{
+.login-center {
   margin: 0 50px;
   top: 20%;
 }
 
-.register-center{
+.register-center {
   margin: 0 50px;
   top: 17%;
 }
 
-h1{
+h1 {
   font-size: 36px;
 }
 
 .select-gender {
   .error {
     margin-right: -21%;
+  }
+}
+.profile-screen{
+  height: 120%;
+  .profile-center {
+    top: 15%;
+
+    .select-wrapper {
+      width: 35px;
+      height: 35px;
+      .imageSrc {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    .div-icon {
+      padding: 0;
+    }
+
+    .profile-data{
+      .profile-data-name{
+        text-align: left;
+      }
+
+      button, input{
+        height: 35px;
+      }
+    }
+
+    .profile-data {
+      .profile-data-name {
+        text-align: left;
+      }
+    }
+
+    .div-profile-btn {
+      .profile-btn {
+        height: 35px;
+      }
+    }
   }
 }

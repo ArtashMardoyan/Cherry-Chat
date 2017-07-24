@@ -10,12 +10,12 @@
   @import "max480minHeight750";
 }
 
-@media (min-width: 480px) and (max-width: 767px) and (max-height: 767px) {
-  @import "min481max767maxHeight767";
+@media (min-width: 480px) and (max-width: 767px) and (max-height: 710px) {
+  @import "min481max767maxHeight710";
 }
 
-@media (min-width: 480px) and(max-width: 767px) and (min-height: 767px) {
-  @import "min481max767minHeight767";
+@media (min-width: 480px) and(max-width: 767px) and (min-height: 711px) {
+  @import "min481max767minHeight711";
 }
 
 @media (min-width: 768px) and (max-width: 992px) {

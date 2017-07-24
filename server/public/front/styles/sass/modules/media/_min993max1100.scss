@@ -5,3 +5,17 @@
 .register-center {
   top: 15%;
 }
+
+.profile-center {
+  .div-profile-btn {
+    padding: 0 50px!important;
+  }
+  .select-wrapper{
+    width: 30px;
+    height: 30px;
+    .imageSrc {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

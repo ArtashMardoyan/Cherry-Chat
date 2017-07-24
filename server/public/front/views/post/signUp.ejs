@@ -8,7 +8,7 @@
                 <div class="login text-center" id="card">
                     <div class="front signin_form">
                         <p>Register with a new account</p>
-                        <form class="login-form" id="loginForm">
+                        <form class="login-form" id="loginForm" action="/myProfile" method="get">
                             <div class="form-group col-sm-6 col-xs-12">
                                 <div class="input-group input-relative">
                                     <input type="text" class="form-control border-dark"
@@ -64,6 +64,7 @@
                                     </div>
                                     <div class="col-xs-3 select-date select-day">
                                         <select name="day" class="selectpicker" id="day">
+                                            <option value="0">Day</option>
                                         </select>
                                     </div>
                                     <p class="error-date"></p>
@@ -83,5 +84,12 @@
             </div>
         </div>
     </div>
+    <% include ./layout/partials/copyRight.ejs %>
+</main>
+
+<% include ./layout/partials/script.ejs %>
+<script src="/bower_components/bootstrap-select/js/bootstrap-select.js"></script>
+<script type="text/javascript" src="/js/date.js"></script>
+<script type="text/javascript" src="/js/form.js"></script>
 
 <% include ./layout/partials/footer.ejs %>

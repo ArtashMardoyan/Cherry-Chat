@@ -65,13 +65,20 @@
 
       button, input{
         height: 40px;
-        width: 100%;
       }
     }
 
     .div-profile-btn {
       .profile-btn {
         height: 40px;
+        width: 100%;
+      }
+    }
+
+    .modal-content{
+      margin: 22% 20%;
+      .input-contain{
+        padding: 0 23%;
       }
     }
   }
