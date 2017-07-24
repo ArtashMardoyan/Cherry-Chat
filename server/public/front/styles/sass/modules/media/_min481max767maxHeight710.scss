@@ -1,0 +1,85 @@
+.login-screen {
+  height: 145%;
+  .login-center {
+    top: 10%;
+    margin: 0 50px;
+  }
+}
+
+.register-screen {
+  height: 220%;
+  .register-center {
+    top: 7%;
+    margin: 0 50px;
+  }
+}
+
+.copy-right-text {
+  text-align: center !important;
+}
+
+.login .sign-btn a:hover {
+    color: $silver;
+}
+
+.select-gender {
+  .error {
+    margin-right: -13%;
+  }
+  button {
+    span {
+      font-size: $text-size-max480;
+    }
+  }
+}
+
+.input-relative {
+  .form-control {
+    font-size: $text-size-max480;
+  }
+}
+
+.profile-screen{
+  height: 215%;
+  .profile-center{
+    top: 15%;
+    .avatar{
+      width: 80%;
+      height: 80%;
+      margin: -50% auto 0 auto;
+    }
+
+    .select-wrapper{
+      width: 35px;
+      height: 35px;
+      .imageSrc {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    .profile-data{
+      .profile-data-name{
+        text-align: left;
+      }
+
+      button, input{
+        height: 40px;
+      }
+    }
+
+    .div-profile-btn {
+      .profile-btn {
+        height: 40px;
+        width: 100%;
+      }
+    }
+
+    .modal-content{
+      margin: 22% 20%;
+      .input-contain{
+        padding: 0 23%;
+      }
+    }
+  }
+}

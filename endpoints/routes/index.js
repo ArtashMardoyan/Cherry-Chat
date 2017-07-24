@@ -15,6 +15,11 @@ module.exports = [
         handler: './handlers/404'
     },
     {
+        url: '/myProfile',
+        method: 'get',
+        handler: './handlers/profilePage'
+    },
+    {
         url: '*',
         method: 'get',
         handler: './handlers/error'
