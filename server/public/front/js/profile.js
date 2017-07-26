@@ -2,18 +2,18 @@
 
 (function ($) {
 
-    // const user = {
-    //     fullName: 'Artash Mardoyan Gevorgi',
-    //     email: 'artashmardoyan@gmail.com',
-    //     gender: 'female',
-    //     password: 'chemmorana666',
-    //     date: {
-    //         year: '1998',
-    //         month: '02',
-    //         day: '5'
-    //     },
-    //     photo: {}
-    // };
+    const user = {
+        fullName: 'Artash Mardoyan Gevorgi',
+        email: 'artashmardoyan@gmail.com',
+        gender: 'female',
+        password: 'chemmorana666',
+        date: {
+            year: '1998',
+            month: '02',
+            day: '5'
+        },
+        photo: {}
+    };
 
     let profileFullName = $('#profileFullName');
     let profileEmail = $('#profileEmail');

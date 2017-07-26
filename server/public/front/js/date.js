@@ -35,10 +35,10 @@ let daysInMonth = (month, year) => {
     }
 };
 
-let updateNumberOfDays = (days, month, year) => {
+let updateNumberOfDays = (days, months, years) => {
     days.html('');
-    let month = month.val();
-    let year = year.val();
+    let month = months.val();
+    let year = years.val();
     let day = daysInMonth(month, year);
     days.append($('<option />').val('0').html('Day'));
     for (let i = 1; i < day + 1; i += 1) {
