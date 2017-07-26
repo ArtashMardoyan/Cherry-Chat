@@ -4,8 +4,8 @@ const _assign = require('lodash').assign;
 
 module.exports = (req, res) => {
     res.render('profilePage', _assign({
-        title: config.title + ' | myProfile',
+        title: config.title + ' | My profile',
         meta: meta.signUp,
-        baseUrl: config.baseUrl + '/myProfile'
+        baseUrl: config.baseUrl + '/myProfile',
     }, req.locals));
 };

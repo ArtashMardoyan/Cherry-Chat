@@ -15,6 +15,14 @@
         photo: {}
     };
 
+    let profileFullName = $('#profileFullName');
+    let profileEmail = $('#profileEmail');
+    let profileGender = $('#profileGender');
+    let profileYears = $('#profileYears');
+    let profileMonths = $('#profileMonths');
+    let profileDays = $('#profileDays');
+    let avatar = $('#avatar');
+
     class User {
         constructor(user) {
             this.username = user.fullName;
@@ -27,13 +35,15 @@
         }
 
         setUserValue() {
-            fullName.val(this.username);
-            email.val(this.email);
-            gender.val(this.gender);
-            years.val(this.year).selectpicker('refresh');
-            months.val(this.month).selectpicker('refresh');
-            updateNumberOfDays();
-            days.val(this.day).selectpicker('refresh');
+            profileFullName.val(this.username);
+            profileEmail.val(this.email);
+            profileGender.val(this.gender);
+            updateNumberOfYears(profileYears);
+            updateDaysInMonth(profileMonths);
+            profileYears.val(this.year).selectpicker('refresh');
+            profileMonths.val(this.month).selectpicker('refresh');
+            updateNumberOfDays(profileDays, profileMonths, profileYears);
+            profileDays.val(this.day).selectpicker('refresh');
         }
 
         setUserPhoto() {
@@ -68,11 +78,11 @@
         }
     }
 
-    let newUser = new User(user);
-
     $('.profile-data-value-addon').on('click', function () {
         $(this).prev('input').attr('disabled', false);
     });
+
+    let newUser = new User(user);
 
     newUser.setUserValue();
     newUser.setUserPhoto();
