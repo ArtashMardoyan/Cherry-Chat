@@ -1,42 +1,32 @@
 'use strict';
 
-const month = moment().localeData('us').months(),
-    year = moment().year(),
-    fullName = $('#fullName'),
-    gender = $('#gender'),
-    avatar = $('#avatar'),
-    months = $('#month'),
-    email = $('#email'),
+const months = $('#month'),
     years = $('#year'),
     days = $('#day');
-let minAge = year - 12,
-    maxAge = year - 80;
 
-let updateNumberOfYears = () => {
+
+let updateNumberOfYears = (yearInput) => {
+    let year = moment().year(),
+        minAge = year - 12,
+        maxAge = year - 80;
+
     for (let i = minAge; i > maxAge; i -= 1) {
-        years.append($('<option />').val(i).html(i));
+        yearInput.append($('<option />').val(i).html(i));
     }
-    years.selectpicker('refresh');
+
+    yearInput.selectpicker('refresh');
+
 
 };
 
-let updateDaysInMonth = () => {
+let updateDaysInMonth = (monthInput) => {
+    let month = moment().localeData('us').months();
+
     for (let i = 1; i < month.length + 1; i += 1) {
-        months.append($('<option />').val(`0${i}`).html(month[i - 1]));
+        monthInput.append($('<option />').val(`0${i}`).html(month[i - 1]));
     }
-    months.selectpicker('refresh');
-};
 
-let updateNumberOfDays = () => {
-    days.html('');
-    let month = months.val();
-    let year = years.val();
-    let day = daysInMonth(month, year);
-    days.append($('<option />').val('0').html('Day'));
-    for (let i = 1; i < day + 1; i += 1) {
-        days.append($('<option />').val(i).html(i));
-    }
-    days.selectpicker('refresh');
+    monthInput.selectpicker('refresh');
 };
 
 let daysInMonth = (month, year) => {
@@ -45,9 +35,21 @@ let daysInMonth = (month, year) => {
     }
 };
 
+let updateNumberOfDays = (days, month, year) => {
+    days.html('');
+    let month = month.val();
+    let year = year.val();
+    let day = daysInMonth(month, year);
+    days.append($('<option />').val('0').html('Day'));
+    for (let i = 1; i < day + 1; i += 1) {
+        days.append($('<option />').val(i).html(i));
+    }
+    days.selectpicker('refresh');
+};
+
 $('#year, #month').change(() => {
-    updateNumberOfDays();
+    updateNumberOfDays(days, months, years);
 });
 
-updateNumberOfYears();
-updateDaysInMonth();
+updateNumberOfYears(years);
+updateDaysInMonth(months);

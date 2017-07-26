@@ -23,7 +23,7 @@
                     <div class="col-md-8 col-xs-12">
                         <div class="input-group">
                             <input type="text" class="form-control profile-data-value" autocomplete="off"
-                                   name="fullName" id="fullName" disabled>
+                                   name="fullName" id="profileFullName" value="<%- user[fullName] %>" disabled>
                             <span class="input-group-addon profile-data-value-addon">
                                 <i class="glyphicon glyphicon-pencil" id="editFullName"></i>
                             </span>
@@ -37,7 +37,7 @@
                     <div class="col-md-8 col-xs-12">
                         <div class="input-group">
                             <input type="text" class="form-control profile-data-value" autocomplete="off"
-                                   name="email" id="email" disabled>
+                                   name="email" id="profileEmail" disabled>
                             <span class="input-group-addon profile-data-value-addon">
                                 <i class="glyphicon glyphicon-pencil" id="editEmail"></i>
                             </span>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-md-8 col-xs-12">
                         <div class="input-group input-relative select-gender">
-                            <select name="gender" class="selectpicker" id="gender">
+                            <select name="gender" class="selectpicker" id="profileGender">
                                 <option value="Gender">Gender</option>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
@@ -68,17 +68,17 @@
                     <div class="col-md-8 col-xs-12">
                         <div class="input-group input-relative">
                             <div class="col-xs-4 select-date select-year">
-                                <select name="year" class="selectpicker" id="year">
+                                <select name="year" class="selectpicker" id="profileYears">
                                     <option value="0">Year</option>
                                 </select>
                             </div>
                             <div class="col-xs-5 select-date select-month">
-                                <select name="month" class="selectpicker" id="month">
+                                <select name="month" class="selectpicker" id="profileMonths">
                                     <option value="0">Month</option>
                                 </select>
                             </div>
                             <div class="col-xs-3 select-date select-day">
-                                <select name="day" class="selectpicker" id="day">
+                                <select name="day" class="selectpicker" id="profileDays">
                                 </select>
                             </div>
                             <p class="error-date"></p>
@@ -157,13 +157,5 @@
             </form>
         </div>
     </div>
-    <% include ./layout/partials/copyRight.ejs %>
-</main>
-<% include ./layout/partials/script.ejs %>
-
-<script src="/bower_components/bootstrap-select/js/bootstrap-select.js"></script>
-<script type="text/javascript" src="/js/date.js"></script>
-<script type="text/javascript" src="/js/form.js"></script>
-<script type="text/javascript" src="/js/profile.js"></script>
 
 <% include ./layout/partials/footer.ejs %>
