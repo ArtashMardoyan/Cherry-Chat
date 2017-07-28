@@ -6,7 +6,11 @@
          col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 min-height">
             <form action="" class="login-form" id="loginForm">
                 <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
-                    <div class="avatar" id="avatar"></div>
+                    <% if (user.gender === 'Male') { %>
+                    <div class="avatar-male" id="avatar"></div>
+                    <% } else { %>
+                    <div class="avatar-female" id="avatar"></div>
+                    <% } %>
                     <div class="col-md-4 col-md-offset-3 col-xs-4 col-xs-offset-4 div-icon">
                     <span class="select-wrapper">
                        <input type="file" name="imageSrc" class="imageSrc" id="imageSrc">
@@ -23,7 +27,7 @@
                     <div class="col-md-8 col-xs-12">
                         <div class="input-group">
                             <input type="text" class="form-control profile-data-value" autocomplete="off"
-                                   name="fullName" id="profileFullName" value="<%- user[fullName] %>" disabled>
+                                   name="fullName" id="profileFullName" value="<%= user.fullName %>" disabled>
                             <span class="input-group-addon profile-data-value-addon">
                                 <i class="glyphicon glyphicon-pencil" id="editFullName"></i>
                             </span>
@@ -37,7 +41,7 @@
                     <div class="col-md-8 col-xs-12">
                         <div class="input-group">
                             <input type="text" class="form-control profile-data-value" autocomplete="off"
-                                   name="email" id="profileEmail" disabled>
+                                   name="email" id="profileEmail" value="<%= user.email %>" disabled>
                             <span class="input-group-addon profile-data-value-addon">
                                 <i class="glyphicon glyphicon-pencil" id="editEmail"></i>
                             </span>
@@ -51,9 +55,15 @@
                     <div class="col-md-8 col-xs-12">
                         <div class="input-group input-relative select-gender">
                             <select name="gender" class="selectpicker" id="profileGender">
+                                <% if(user.gender === 'Male'){ %>
                                 <option value="Gender">Gender</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
+                                <option value="<%= user.gender %>" selected><%= user.gender %></option>
+                                <option value="Female">Female</option>
+                                <% }else{ %>
+                                <option value="Gender">Gender</option>
+                                <option value="<%= user.gender %>" selected><%= user.gender %></option>
+                                <option value="Male">Male</option>
+                                <% } %>
                             </select>
                             <span class="input-group-addon profile-data-value-addon">
                                 <i class="fa fa-venus-mars"></i>
@@ -69,16 +79,17 @@
                         <div class="input-group input-relative">
                             <div class="col-xs-4 select-date select-year">
                                 <select name="year" class="selectpicker" id="profileYears">
-                                    <option value="0">Year</option>
+                                    <option value="<%= user.year %>"><%= user.year %></option>
                                 </select>
                             </div>
                             <div class="col-xs-5 select-date select-month">
                                 <select name="month" class="selectpicker" id="profileMonths">
-                                    <option value="0">Month</option>
+                                    <option value="<%= user.month %>"><%= user.month %></option>
                                 </select>
                             </div>
                             <div class="col-xs-3 select-date select-day">
                                 <select name="day" class="selectpicker" id="profileDays">
+                                    <option value="<%= user.day %>"><%= user.day %></option>
                                 </select>
                             </div>
                             <p class="error-date"></p>
@@ -150,7 +161,6 @@
                                     <input type="submit" class="btn btn-success" id="save" value="save">
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -158,4 +168,4 @@
         </div>
     </div>
 
-<% include ./layout/partials/footer.ejs %>
+    <% include ./layout/partials/footer.ejs %>

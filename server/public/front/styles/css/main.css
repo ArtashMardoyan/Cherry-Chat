@@ -331,12 +331,20 @@ select option:first-child {
   outline: none !important;
 }
 
-.avatar {
+.avatar, .avatar-male, .avatar-female {
   border: 2px solid #731121;
   border-radius: 50%;
   margin-top: -55%;
   height: 110px;
   width: 110px;
+}
+
+.avatar-male {
+  background: url("../../img/icon/male-user-img.png") top center/cover no-repeat;
+}
+
+.avatar-female {
+  background: url("../../img/icon/female-user-img.png") top center/cover no-repeat;
 }
 
 .description-data {
@@ -764,7 +772,7 @@ footer .copy-right-text .copy-right {
   .profile-screen .profile-center {
     top: 15%;
   }
-  .profile-screen .profile-center .avatar {
+  .profile-screen .profile-center .avatar, .profile-screen .profile-center .avatar-male, .profile-screen .profile-center .avatar-female {
     width: 80%;
     height: 80%;
     margin: -50% auto 0 auto;

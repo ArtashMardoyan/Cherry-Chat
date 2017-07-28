@@ -6,6 +6,16 @@
   width: 110px;
 }
 
+.avatar-male {
+  background: url("../../img/icon/male-user-img.png") top center / cover no-repeat;
+  @extend .avatar;
+}
+
+.avatar-female {
+  background: url("../../img/icon/female-user-img.png") top center / cover no-repeat;
+  @extend .avatar;
+}
+
 .description-data {
   text-align: center;
   color: $silver;
@@ -74,39 +84,39 @@
   }
 }
 
-.div-change-password{
+.div-change-password {
   text-align: center;
-  .change-password{
+  .change-password {
     color: $silver;
     cursor: pointer;
   }
 }
 
-.div-change-password2{
-  .modal-dialog{
-    .modal-content{
+.div-change-password2 {
+  .modal-dialog {
+    .modal-content {
       margin: 22% 13%;
       border-radius: 15px;
       border: 2px solid $darkCherry !important;
       background-color: $cherry !important;
-      .title-modal{
+      .title-modal {
         text-align: center;
         padding: 15px;
         color: $silver;
       }
-      .body-modal{
+      .body-modal {
         height: 150px;
         padding: 15px;
-        .edit-password{
+        .edit-password {
           @include placeholder($placeholder-color);
           border: 2px solid $silver;
           border-radius: 8px;
         }
       }
-      .footer-modal{
+      .footer-modal {
         padding: 15px;
         text-align: right;
-        button{
+        button {
           outline: none !important;
         }
       }
