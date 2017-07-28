@@ -16,6 +16,11 @@ module.exports = [
     },
     {
         url: '/myProfile',
+        method: 'post',
+        handler: './handlers/profilePage'
+    },
+    {
+        url: '/myProfile',
         method: 'get',
         handler: './handlers/profilePage'
     },

@@ -45,6 +45,7 @@
         },
         submitHandler: function () {
             $('#myModal').modal('hide');
+            loginForm.submit()
         }
     };
 
@@ -68,7 +69,7 @@
                 equalTo: 'Please enter the same value.'
             }
         }
-    }
+    };
 
     $.validator.addMethod('fullName', function (value) {
         return /^[a-z,'-._]+((\s)[a-z,'-._]+((\s)[a-z,'-._]+)?)?$/i.test(value);
